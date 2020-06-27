@@ -15,3 +15,14 @@ Computer Science Education Consultant
 - SMCOE
 - Vidcode
 - RCSD
+
+### Availability
+
+- Consultation (1-10 hours)
+- Short projects (10-100 hours)
+- Full-time 
+
+### Rates
+
+- $150/hr 
+- 1 hour free coaching for teachers
