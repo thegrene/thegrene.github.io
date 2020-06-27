@@ -6,12 +6,12 @@ Computer Science Education Consultant
 
 ### Curriculum Development
 
--Vidcode
--Hopscotch
--CodeCombat
+- Vidcode
+- Hopscotch
+- CodeCombat
 
 ### Professional Learning
 
--SMCOE
--Vidcode
--RCSD
+- SMCOE
+- Vidcode
+- RCSD
