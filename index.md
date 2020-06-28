@@ -5,9 +5,9 @@ Computer Science Education Consultant
 [Inquiries](mailto:emily0@gmail.com)
 
 ### Curriculum Development
-![Vidcode](vidcode.png)
-![Hopscotch](hopscotch.png)
-![CodeCombat](codecombat.png)
+![Vidcode](logos/vidcode.png)
+![Hopscotch](logos/hopscotch.png)
+![CodeCombat](logos/codecombat.png)
 
 ### Professional Learning
 
