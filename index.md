@@ -13,7 +13,7 @@ Computer Science Education Consultant
 ### Professional Learning
 
 - SMCOE
-- Vidcode
+- CA STEAM Symposium
 - RCSD
 
 ### Availability
@@ -24,5 +24,5 @@ Computer Science Education Consultant
 
 ### Rates
 
-- $150/hr 
-- 1 hour free coaching for teachers
+- base rate $150/hr 
+- 1 hour free coaching for any teacher [Sign Up](https://calendly.com/doctorem)
