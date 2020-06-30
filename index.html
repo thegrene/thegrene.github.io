@@ -8,20 +8,27 @@ body {
 }
 
 .sidenav {
-  width: 130px;
+  width: 30%;
   position: fixed;
   z-index: 1;
   top: 20px;
-  left: 10px;
-  background: #eee;
+  left: 5%;
   overflow-x: hidden;
   padding: 8px 0;
 }
 
-.sidenav a {
-  padding: 6px 8px 6px 16px;
+.sidenav h1 {
+  padding: 16px 8px 6px 16px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 30px;
+  color: black;
+  display: block;
+}
+
+.sidenav a {
+  padding: 16px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 18px;
   color: #2196F3;
   display: block;
 }
@@ -30,9 +37,16 @@ body {
   color: #064579;
 }
 
+.padded {
+  padding: 10px 10px 10px 10px;
+  vertical-align: top;
+}
+
 .main {
-  margin-left: 140px; /* Same width as the sidebar + left position in px */
-  font-size: 28px; /* Increased text to enable scrolling */
+  margin-left: 40%; /* Same width as the sidebar + left position in px */
+  margin-right: 5%;
+  margin-top: 5%;
+  font-size: 14px; /* Increased text to enable scrolling */
   padding: 0px 10px;
 }
 
@@ -45,21 +59,28 @@ body {
 <body>
 
 <div class="sidenav">
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#clients">Clients</a>
-  <a href="#contact">Contact</a>
+<h1>Computer Science Education Consulting</h1>
+<img src="hearts.png" width = 100%>
+  <a href="mailto:emily0@gmail.com">Contact</a>
+  <a href="https://calendly.com/doctorem">Book a meeting</a>
 </div>
 
 <div class="main">
-  <h2>Auto Sidebar</h2>
-  <p>This sidebar is as tall as its content (the links), and is always shown.</p>
-  <p>Scroll down the page to see the result.</p>
-<img src="logos/vidcode.png" alt="Vidcode" width=100>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <h1>Dr. Emily Thomforde</h1>
+ <h2>Curriculum</h2>
+<img src="logos/vidcode.png" alt="Vidcode" width=25% class=padded>
+<img src="logos/hopscotch.png" alt="Hopscotch" width=25% class=padded>
+<img src="logos/codecombat.png" alt="CodeCombat" width=25% class=padded>
+
+ <h2>Professional Development</h2>
+<img src="logos/smcoe.png" alt="San Mateo County Office of Education" width=25% class=padded>
+<img src="logos/csnyc.png" alt="CSforAll NYC" width=25% class=padded>
+<img src="logos/casteam.jpg" alt="California Steam Symposium" width=25% class=padded>
+
+ <h2>Instruction</h2>
+<img src="logos/rcsd.png" alt="Redwood City School District" width=25% class=padded>
+<img src="logos/eoro.png" alt="Each One Reach One" width=25% class=padded>
+<img src="logos/codinggirls.jpg" alt="Coding Girls" width=25% class=padded>
 </div>  
 
 </body>
