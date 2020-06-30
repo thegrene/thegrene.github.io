@@ -5,7 +5,7 @@ Computer Science Education Consultant
 [Inquiries](mailto:emily0@gmail.com)
 
 ### Curriculum Development
-![Vidcode](logos/vidcode.png | width=100)
+<img src="logos/vidcode.png" alt="Vidcode" width=100>
 ![Hopscotch](logos/hopscotch.png | width=100)
 ![CodeCombat](logos/codecombat.png | width=100)
 
