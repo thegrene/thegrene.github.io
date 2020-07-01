@@ -70,6 +70,7 @@ body {
 .centercluster {
   text-align: center;
   padding-top:5px;
+  display:none;
 }
 
 @media screen and (max-height: 450px) {
@@ -91,9 +92,8 @@ hr.rounded {
 
 <img src="hearts.png" width = 100% id="mainpic">
 
-<div class="centercluster">
-  <a href="https://drive.google.com/file/d/1svAZO9Idts-bXSFSklDvmUcEZtpuG4Wh" class=padded>Resume</\
-a>
+<div class="centercluster" id="contact">
+  <a href="https://drive.google.com/file/d/1svAZO9Idts-bXSFSklDvmUcEZtpuG4Wh"class=padded id="resume">Resume</a>
   <a href="mailto:emily0@gmail.com" class=padded>Contact</a>
   <a href="https://calendly.com/doctorem" class=padded>Calendar</a>
 </div>
@@ -112,14 +112,17 @@ function reset(){
   document.getElementById("mainpic").src = "hearts.png";
   document.getElementById("title").innerHTML = "How to use this website";
   document.getElementById("details").src = "hearts.html";
+  document.getElementById("contact").style.display = "none";
 }
 
 function showPerson(who, what) {
   var safewho = who.replace(/headshots\//, "");
   var name = safewho.replace(/\.(jpg|png)/, ".html");
+
   document.getElementById("mainpic").src = who;
   document.getElementById("title").innerHTML = what;
   document.getElementById("details").src = name;
+  document.getElementById("contact").style.display = "block";
 }
 </script>
 </div>
