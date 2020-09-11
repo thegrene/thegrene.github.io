@@ -99,12 +99,12 @@ hr.rounded {
 </div>
 
 <hr class="rounded">
-<img src="headshots/pragati.jpg" alt="Pragati Jain" class=person onclick="showPerson(src,alt)">
-<img src="headshots/victor.png" alt="Victor Hicks" class=person onclick="showPerson(src,alt)">
-<img src="headshots/meg.jpg" alt="Meg Ray" class=person onclick="showPerson(src,alt)">
-<img src="headshots/ed.png" alt="Ed Campos Jr." class=person onclick="showPerson(src,alt)">
-<img src="headshots/galen.png" alt="Galen Sterling-Smith" class=person onclick="showPerson(src,alt)">
-<img src="headshots/em.jpg" alt="Dr. Emily Thomforde" class=person onclick="showPerson(src,alt)">
+<img src="pragati/headshot.jpg" alt="Pragati Jain" id="pragati" class=person onclick="showPerson(id,alt)">
+<img src="victor/headshot.png" alt="Victor Hicks" id="victor" class=person onclick="showPerson(id,alt)">
+<img src="meg/headshot.jpg" alt="Meg Ray" id="meg" class=person onclick="showPerson(id,alt)">
+<img src="ed/headshot.png" alt="Ed Campos Jr." id="ed" class=person onclick="showPerson(id,alt)">
+<img src="galen/headshot.png" alt="Galen Sterling-Smith" id="galen" class=person onclick="showPerson(id,alt)">
+<img src="em/headshot.jpg" alt="Dr. Emily Thomforde" id="em" class=person onclick="showPerson(id,alt)">
 
 
 <script>
@@ -119,9 +119,9 @@ function showPerson(who, what) {
   var safewho = who.replace(/headshots\//, "");
   var name = safewho.replace(/\.(jpg|png)/, ".html");
 
-  document.getElementById("mainpic").src = who;
+  document.getElementById("mainpic").src = who + "/headshot.png";
   document.getElementById("title").innerHTML = what;
-  document.getElementById("details").src = name;
+  document.getElementById("details").src = who + "/about.html";
   document.getElementById("contact").style.display = "block";
 }
 </script>
