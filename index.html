@@ -5,6 +5,66 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 10px;
+  margin-top: -40px;
+  color: white;
+  font-size: 40px;
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 0 10px 10px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 10px 0 0 10px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0,0,0, 0.6);
+}
+
+.numbertext {
+  color: white;
+  font-size: 16px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
 .sidenav {
   width: 30%;
   position: fixed;
@@ -23,16 +83,20 @@ body {
   display: block;
 }
 
-.sidenav a {
-  padding: 16px 8px 6px 16px;
+.butt {
+  top: 50%;
+  
+  padding: 10px 10px 10px 10px;
   text-decoration: none;
   font-size: 18px;
-  color: #2196F3;
-  display: block;
+  color: black;
+  width: 33%;
+  
+  vertical-align: center;
 }
 
-.sidenav a:hover {
-  color: #064579;
+.butt:hover {
+  background-color: rgba(0,0,0,0.2);
 }
 
 .padded {
@@ -58,10 +122,59 @@ body {
 
 <div class="sidenav">
 <h1>Dr. Emily Thomforde</h1>
-<img src="hearts.png" width="100%">
-  <a href="mailto:emily0@gmail.com">Contact</a> 
-  <a href="http://thegrene.github.io/press/index.html">Press</a>
-  <a href="https://calendly.com/doctorem">Book a meeting</a>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 8</div>
+    <img src="art/colorpuffs.png" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 8</div>
+    <img src="art/sputnik.png" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 8</div>
+    <img src="art/hearts.png" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 8</div>
+    <img src="art/swirls.png" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 8</div>
+    <img src="art/tree.png" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 8</div>
+    <img src="art/triangles_gradient.png" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">7 / 8</div>
+    <img src="art/bricks2.png" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">8 / 8</div>
+    <img src="art/conch.png" style="width:100%">
+  </div>
+    
+<a class="prev" onclick="plusSlides(-1)">&#8249;</a>
+<a class="next" onclick="plusSlides(1)">&#8250;</a>
+
+</div>
+
+<div class="padded">
+  <a class="butt" href="mailto:emily0@gmail.com">Contact</a> 
+<a class="butt" href="http://thegrene.github.io/press/index.html">Press</a> 
+<a class="butt" href="https://calendly.com/doctorem">Book a meeting</a>
+</div>
+
 </div>
 
 <div class="main">
@@ -86,7 +199,29 @@ body {
 
 </div>  
 
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
 
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+}
+</script>
  
 
 </body></html>
