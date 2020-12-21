@@ -80,6 +80,11 @@ img {
   display: block;
 }
 
+.sidenav a {
+  text-decoration: none;
+  color: black;
+}
+
 .butt {
   top: 50%;
   
