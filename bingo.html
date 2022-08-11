@@ -6,27 +6,27 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.5/pdfmake.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.5/vfs_fonts.js"></script>
 
-
 <body>
 
-<i>Bingo</i>
+Your Standards Bingo card should have downloaded as a pdf. Refresh this page to download another.
 </body>
 <script>
 
 var cs = ['Recognize and define computational problems', 'Collaborate around computing']
-var s = cs[0];
+var s = cs[1];
 var w = 94;
 var dd = {
 	content: [
-		{text: 'Title', style: 'header'},
-		'A long description, purpose, and rules.',
+
+
 		{
 			style: 'tableExample',
 			table: {
 			    widths: [w, w, w, w, w],
 				body: [
 
-					[{text: 'S', style: 'header'}, {text: 'T', style: 'header'}, {text: 'E', style: 'header'}, {text: 'A', style: 'header'}, {text: 'M', style: 'header'}]
+					[{text: 'S', style: 'header'}, {text: 'T', style: 'header'}, {text: 'E', style: 'header'}, {text: 'A', style: 'header'}, {text: 'M', style: 'header'}],
+					['NGSS Science & Engineering Practices', 'ELA Core Standards', 'California Computer Science Practices', 'VAPA and Social Studies', 'Common Core Math Practices'],
 				]
 				
 			},
@@ -38,9 +38,9 @@ var dd = {
 			    widths: [w, w, w, w, w],
 			    heights: [w, w, w, w, w],
 				body: [
-					['One value goes here', 'Another one here', 'OK?', 'and', 'math'],
 					['science', 'tech', 'cs', 'art', 'math'],
-					['science', 'tech', 'Foster an inclusive computing culture', 'art', 'math'],
+					['science', 'tech', 'cs', 'art', 'math'],
+					['science', 'tech', { text:'Foster an inclusive computing culture', fillColor: '#dddddd'}, 'art', 'math'],
 					['science', 'tech', s, 'art', 'math'],
 					['science', 'tech', 'cs', 'art', 'math']
 				]
@@ -82,12 +82,14 @@ var dd = {
 		}
 	},
 	defaultStyle: {
-		alignment: 'center'
+		alignment: 'center',
+		margin: 'auto'
 	}
 }
 	
 
-
 pdfMake.createPdf(dd).download();
+
+
 </script>
 </html>
