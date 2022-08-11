@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+<title>Standards Bingo</title>
+</head>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.5/pdfmake.js">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.5/vfs_fonts.js">
+
+
+<body>
+
+<i>Bingo</i>
+</body>
+<script>
+
+var cs = ['Recognize and define computational problems', 'Collaborate around computing']
+var s = cs[0];
+var w = 94;
+var dd = {
+	content: [
+		{text: 'Title', style: 'header'},
+		'A long description, purpose, and rules.',
+		{
+			style: 'tableExample',
+			table: {
+			    widths: [w, w, w, w, w],
+				body: [
+
+					[{text: 'S', style: 'header'}, {text: 'T', style: 'header'}, {text: 'E', style: 'header'}, {text: 'A', style: 'header'}, {text: 'M', style: 'header'}]
+				]
+				
+			},
+			layout: 'noBorders'
+		},
+		{
+			style: 'tableExample',
+			table: {
+			    widths: [w, w, w, w, w],
+			    heights: [w, w, w, w, w],
+				body: [
+					['One value goes here', 'Another one here', 'OK?', 'and', 'math'],
+					['science', 'tech', 'cs', 'art', 'math'],
+					['science', 'tech', 'Foster an inclusive computing culture', 'art', 'math'],
+					['science', 'tech', s, 'art', 'math'],
+					['science', 'tech', 'cs', 'art', 'math']
+				]
+			}
+		},
+		{
+			style: 'tableExample',
+			table: {
+			    widths: [w, w, w, w, w],
+				body: [
+
+					[{text: 'B', style: 'header'}, {text: 'I', style: 'header'}, {text: 'N', style: 'header'}, {text: 'G', style: 'header'}, {text: 'O', style: 'header'}]
+				]
+				
+			},
+			layout: 'noBorders'
+		}
+	],
+	styles: {
+		header: {
+			fontSize: 40,
+			bold: true,
+			alignment: 'center',
+			margin: [0, 10, 0, 10]
+		},
+		subheader: {
+			fontSize: 16,
+			bold: true,
+			margin: [0, 10, 0, 5]
+		},
+		tableExample: {
+			margin: [0, 0, 0, 0]
+			//margin: 'auto'
+		},
+		tableHeader: {
+			bold: true,
+			fontSize: 13,
+			color: 'black'
+		}
+	},
+	defaultStyle: {
+		alignment: 'center'
+	}
+}
+	
+
+
+pdfMake.createPdf(dd).open();
+</script>
+</html>
