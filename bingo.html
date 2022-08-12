@@ -12,8 +12,18 @@ Your Standards Bingo card should have downloaded as a pdf. Refresh this page to 
 </body>
 <script>
 
-var cs = ['Recognize and define computational problems', 'Collaborate around computing']
-var s = cs[1];
+var cs = ['CS2. Collaborate around computing.', 'CS3. Recognize and define computational problems.', 'CS4. Develop and use abstractions.', 'CS5. Create computational artifacts.', 'CS6. Test and refine computational artifacts.', 'CS7. Communicate about computing.'];
+var math = ['MP1. Make sense of problems and persevere in solving them.', 'MP2. Reason abstractly and quantitatively.', 'MP3. Construct viable arguments and critique reasoning of others.', 'MP4. Model with mathematics.', 'MP 5. Use appropriate tools strategically.', 'MP 6. Attend to precision.', 'MP 7. Look for and make use of structure.', 'MP 8. Look for and make use of regularity in repeated reasoning.']; 
+var sci = ['Sci1. Ask questions and define problems.', 'Sci2. Develop and use models.', 'Sci3. Plan and carry out investigations.', 'Sci4. Analyze and interpret data.', 'Sci5. Use mathematical and computational thinking.', 'Sci6. Construct explanations and design solutions.', 'Sci7. Engage in argument from evidence.', 'Sci8. Obtain, evaluate, and communicate information.'];
+var art = ['SS1. Develop questions and plan inquiries.', 'SS2. Apply disciplinary tools and concepts.', 'SS3. Evaluate sources and use evidence.', 'SS4. Communicate conclusions and take informed actions.', 'Arts1: Conceive and develop new artistic ideas and work.', 'Arts2: Realize artistic ideas and work through interpretation and presentation.', 'Arts3: Understand and evaluate how the arts convey meaning.', 'Arts4: Relate artistic ideas and work with personal meaning and external context.'];
+var ela = ['E1. Demonstrate independence in reading complex texts, and writing and speaking about them.', 'E2. Build a strong base of knowledge through content rich texts.', 'E3. Obtain, synthesize, and report findings clearly and effectively in response to task and purpose.', 'E4. Comprehend as well as critique.', 'E5. Read, write and speak grounded in evidence.', 'E6. Use technology and digital media strategically and capably.', 'E7. Come to understand other perspectives and cultures through reading, listening, and collaborating.'];
+cs = cs.sort(() => Math.random() - 0.5);
+math = math.sort(() => Math.random() - 0.5);
+sci = sci.sort(() => Math.random() - 0.5);
+art = art.sort(() => Math.random() - 0.5);
+ela = ela.sort(() => Math.random() - 0.5);
+
+
 var w = 94;
 var dd = {
 	content: [
@@ -38,11 +48,11 @@ var dd = {
 			    widths: [w, w, w, w, w],
 			    heights: [w, w, w, w, w],
 				body: [
-					['science', 'tech', 'cs', 'art', 'math'],
-					['science', 'tech', 'cs', 'art', 'math'],
-					['science', 'tech', { text:'Foster an inclusive computing culture', fillColor: '#dddddd'}, 'art', 'math'],
-					['science', 'tech', s, 'art', 'math'],
-					['science', 'tech', 'cs', 'art', 'math']
+					[sci[0], ela[0], cs[0], art[0], math[0]],
+					[sci[1], ela[1], cs[1], art[1], math[1]],
+					[sci[2], ela[2], { text:'CS1. Foster an inclusive computing culture.', fillColor: '#dddddd'}, art[2], math[2]],
+					[sci[3], ela[3], cs[3], art[3], math[3]],
+					[sci[4], ela[4], cs[4], art[4], math[4]],
 				]
 			}
 		},
