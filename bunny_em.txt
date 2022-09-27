@@ -73,8 +73,8 @@ Buildings
 		on click:anim glow
 		
 	*cage|cages
-		name:Rabbit cage|Rabbit cages
-		desc:A tiny little cage.<//><b>Effect:</b><.>Produces 1 rabbit every 10 seconds.
+		name:Visitor|Visitorss
+		desc:Someone to keep you company.<//><b>Effect:</b><.>Produces 1 rabbit every 10 seconds.
 		icon:icons[3,0]
 		cost:15 bunnies
 		on tick:yield 0.1 bunny
