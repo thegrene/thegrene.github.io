@@ -1,9 +1,9 @@
 Let's make a game!
-	name:Bunny Clicker
-	by:Orteil
-	desc:This is a simple idle game to showcase some of the basic functionalities of Idle Game Maker.<//>Make bunnies and shoot for the stars!
-	created:25/7/2017
-	updated:24/10/2017
+	name:Giraffe Clicker
+	by:JimBobGiraffe
+	desc:This is pretty much Cookie Clicker reskinned for people who like giraffes more than cookies	
+	created:9-26-2022
+	updated:unknown
 	version:1
 
 Settings
@@ -17,12 +17,12 @@ Layout
 	use default
 		
 Buttons
-	*bunnyButton
-		name:Make a bunny
-		desc:Click this little bunny to get more bunnies!
+	*GiraffeButton
+		name:Make a giraffe
+		desc:Click this giraffe to get more giraffes!
 		on click:anim icon wobble
-		on click:yield 1 bunny
-		on click:if (have goldenTouch and chance(1%)) yield 1 goldenCarrot
+		on click:yield 1 giraffe
+		on click:if (have goldenTouch and chance(1%)) yield 1 goldenAcaciaLeaf
 		icon:stuff/bunny.png
 		no text
 		class:bigButton hasFlares
@@ -31,40 +31,40 @@ Buttons
 		tooltip class:red
 		
 Resources
-	*bunny|bunnies
-		name:Bunny|Bunnies
-		desc:These are your bunnies. You can use them to purchase things. Your goal is to have as many bunnies as possible!
+	*giraffe|giraffes
+		name:Giraffe|Giraffes
+		desc:These are your giraffes. You can use them to purchase things. Your goal is to have as many giraffes as possible!
 		icon:icons[0,0]
 		class:noBackground
 		show earned
 		
-	*goldenCarrot|goldenCarrots
-		name:Golden carrot|Golden carrots
-		desc:These shiny carrots are terribly rare, terribly precious and terribly delicious!
+	*goldenAcaciaLeaf|goldenAcaciaLeaves
+		name:Golden acacia leaf|Golden acacia leaves
+		desc:These shiny acacia leaves are terribly rare, terribly precious and terribly delicious!
 		icon:icons[0,1]
 		class:noBackground
 		hidden when 0
 		
 Shinies
-	*luckyBunny
+	*luckyGiraffe
 		on click:log Woop
 		movement:onRight moveLeft fade bounce:0.05
 		frequency:60
 		frequency variation:30
-		icon:stuff/luckyBunny.png
+		icon:stuff/luckyGiraffe.png
 		class:bigButton
 		on click:
 			$boost=1
 			if (have clover) $boost=4
 			if (chance(25%))
-				//get at least 7, or between 1 and 3 minutes of our bunny production
-				$amount=max(7,random(bunnies:ps*60*1,bunnies:ps*60*3))*$boost
-				toast The lucky bunny grants you<//><b>[$amount] bunnies</b>.
-				yield $amount bunnies
+				//get at least 7, or between 1 and 3 minutes of our giraffe production
+				$amount=max(7,random(giraffes:ps*60*1,giraffes:ps*60*3))*$boost
+				toast The lucky giraffe grants you<//><b>[$amount] giraffe</b>.
+				yield $amount giraffes
 			else
 				$amount=1*$boost
-				toast The lucky bunny grants you<//><b>[$amount] golden carrot[s?$amount]</b>!
-				yield $amount goldenCarrot
+				toast The lucky giraffe grants you<//><b>[$amount] golden acacia leaves[s?$amount]</b>!
+				yield $amount goldenAcaciaLeaf
 			end
 		end
 
@@ -73,11 +73,11 @@ Buildings
 		on click:anim glow
 		
 	*cage|cages
-		name:Visitor|Visitorss
-		desc:Someone to keep you company.<//><b>Effect:</b><.>Produces 1 rabbit every 10 seconds.
+		name:Visitor|Visitors
+		desc:A simple person watching you who only encourages.<//><b>Effect:</b><.>Produces 1 giraffe every 10 seconds.
 		icon:icons[3,0]
-		cost:15 bunnies
-		on tick:yield 0.1 bunny
+		cost:15 giraffes
+		on tick:yield 0.1 giraffe
 		unlocked
 	
 	*hutch|hutches
