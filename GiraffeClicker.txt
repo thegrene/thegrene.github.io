@@ -217,40 +217,40 @@ Upgrades
 	
 	//building upgrades
 	
-	*buildingUpgrade1
+	*leaf
 		name:Leaf
-		desc:A leaf for you to eat!<//><b>Effect:</b><.>snack production x2<.>snack production x2<.>
+		desc:A leaf for you to eat!<//><b>Effect:</b><.>snack production x2
 		icon:icons[2,0] icons[3,0]
 		cost:1000 bunnies
 		passive:multiply yield of snack by 2
 		req:(hutches>=1)
 		
-	*buildingUpgrade2
-		name:branch
+	*branch
+		name:Branch
 		desc:A brach filled with leaves!<//><b>Effect:</b><.>snack production x2
 		icon:icons[2,0] icons[3,1]
 		cost:5000 giraffes
 		passive:multiply yield of snack by 2
 		req:(snack>=5)
 		
-	*buildingUpgrade3
-		name:meal
+	*meal
+		name:Meal
 		desc:A meal filled with yummy food!<//><b>Effect:</b><.>snack production x2
 		icon:icons[2,0] icons[3,2]
 		cost:5000000 bunnies
 		passive:multiply yield of snack by 2
 		req:(hutches>=25)
 		
-	*buildingUpgrade4
-		name:feast
+	*feast
+		name:Feast
 		desc:A feast for you and all of your giraffe friends.<//><b>Effect:</b><.>snack production x2
 		icon:icons[2,0] icons[3,3]
 		cost:5000000 giraffes
 		passive:multiply yield of snack by 2
 		req:(snack>=50)
 		
-	*buildingUpgrade5
-		name:all you can eat buffet
+	*allyoucaneatbuffet
+		name:All You Can Eat Buffet
 		desc:SO. MUCH. FOOOOOOOOOOD.><//><b>Effect:</b><.>snack production x2<.>
 		icon:icons[2,0] icons[3,4]
 		cost:500000000 giraffes
@@ -260,45 +260,45 @@ Upgrades
 
 	//building upgrades
 	
-	*buildingUpgrade1
-		name:Leaf
-		desc:A leaf for you to eat!<//><b>Effect:</b><.>snack production x2<.>snack production x2<.>
+	*hat
+		name:Hat
+		desc:A hat to keep your servants nice and cool.<//><b>Effect:</b><.>keeper production x2<.>keeper production x2<.>
 		icon:icons[2,0] icons[3,0]
-		cost:1000 bunnies
-		passive:multiply yield of snack by 2
-		req:(hutches>=1)
+		cost:11000 giraffes
+		passive:multiply yield of keeper by 2
+		req:(keeper>=1)
 		
-	*buildingUpgrade2
-		name:branch
-		desc:A brach filled with leaves!<//><b>Effect:</b><.>snack production x2
+	*jacket
+		name:Jacket
+		desc:A jacket so that your servants won't freeze during the cold<//><b>Effect:</b><.>keeper production x2
 		icon:icons[2,0] icons[3,1]
-		cost:5000 giraffes
-		passive:multiply yield of snack by 2
-		req:(snack>=5)
+		cost:55000 giraffes
+		passive:multiply yield of keeper by 2
+		req:(keeper>=5)
 		
-	*buildingUpgrade3
-		name:meal
-		desc:A meal filled with yummy food!<//><b>Effect:</b><.>snack production x2
+	*education
+		name:Education
+		desc:You can now teach your servants how to be better at their job.<//><b>Effect:</b><.>keeper production x2
 		icon:icons[2,0] icons[3,2]
-		cost:5000000 bunnies
-		passive:multiply yield of snack by 2
-		req:(hutches>=25)
+		cost:550000 giraffes
+		passive:multiply yield of keeper by 2
+		req:(keepers>=25)
 		
-	*buildingUpgrade4
-		name:feast
-		desc:A feast for you and all of your giraffe friends.<//><b>Effect:</b><.>snack production x2
+	*tools
+		name:Tools
+		desc:Tools to help the servants with their job.<//><b>Effect:</b><.>keeper production x2
 		icon:icons[2,0] icons[3,3]
-		cost:5000000 giraffes
-		passive:multiply yield of snack by 2
-		req:(snack>=50)
+		cost:55000000 giraffes
+		passive:multiply yield of keeper by 2
+		req:(keeper>=50)
 		
-	*buildingUpgrade5
-		name:all you can eat buffet
-		desc:SO. MUCH. FOOOOOOOOOOD.><//><b>Effect:</b><.>snack production x2<.>
+	*food
+		name:Food
+		desc:Food so that the servants can feed you.><//><b>Effect:</b><.>keeper production x2<.>
 		icon:icons[2,0] icons[3,4]
-		cost:500000000 giraffes
-		passive:multiply yield of snack by 2
-		req:(snack>=100)
+		cost:5500000000 giraffes
+		passive:multiply yield of keeper by 2
+		req:(keeper>=100)
 		
 		
 	//golden carrot upgrades
