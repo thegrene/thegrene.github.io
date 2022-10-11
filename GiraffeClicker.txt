@@ -176,7 +176,7 @@ Upgrades
 		desc:Two people coming to see you instead of one.<//><b>Effect:</b><.>+1 giraffe/click
 		icon:icons[1,1]
 		cost:100 giraffe
-		passive:increase giraffe yield of vistor by 1
+		passive:increase giraffe yield of visitor by 1
 		req:1 visitor:earned
 		
 	*family
