@@ -56,7 +56,7 @@ Shinies
 		on click:
 			$boost=1
 			if (have clover) $boost=4
-			if (chance(25%))
+			if (chance(5%))
 				//get at least 7, or between 1 and 3 minutes of our giraffe production
 				$amount=max(7,random(giraffes:ps*60*1,giraffes:ps*60*3))*$boost
 				toast The lucky giraffe grants you<//><b>[$amount] giraffe</b>.
@@ -72,7 +72,7 @@ Buildings
 	*TEMPLATE
 		on click:anim glow
 		
-	*cage|cages
+	*visitor|visitors
 		name:Visitor|Visitors
 		desc:A simple person watching you who only encourages.<//><b>Effect:</b><.>Produces 1 giraffe every 10 seconds.
 		icon:icons[3,0]
@@ -80,72 +80,89 @@ Buildings
 		on tick:yield 0.1 giraffe
 		unlocked
 	
-	*hutch|hutches
-		name:Rabbit hutch|Rabbit hutches
-		desc:A bit roomier than a cage, with enough space to hop around.<//><b>Effect:</b><.>Produces 1 rabbit every 2 seconds.
+	*snack|snacks
+		name:Snack|Snacks
+		desc:A nice little meal.<//><b>Effect:</b><.>Produces 1 giraffe every 2 seconds.
 		icon:icons[3,1]
-		cost:100 bunnies
-		on tick:yield 0.5 bunnies
-		req:100 bunnies:earned
+		cost:100 giraffes
+		on tick:yield 0.5 giraffes
+		req:100 giraffes:earned
 	
-	*coop|coops
-		name:Rabbit coop|Rabbit coops
-		desc:A much nicer rabbit home where full bunny families can live.<//><b>Effect:</b><.>Produces 5 rabbits per second.
+	*keeper|keepers
+		name:Keeper|Keepers
+		desc:A kind zookeeper helping to take care of you<//><b>Effect:</b><.>Produces 8 giraffes per second.
 		icon:icons[3,2]
-		cost:600 bunnies
-		on tick:yield 5 bunnies
-		req:600 bunnies:earned
+		cost:1100 giraffes
+		on tick:yield 8 giraffes
+		req:1100 giraffes:earned
 	
-	*pen|pens
-		name:Rabbit pen|Rabbit pens
-		desc:A lovely enclosure with plenty of green space.<//><b>Effect:</b><.>Produces 12 rabbits per second.
+	*habitat|habitats
+		name:Habitat|Habitats
+		desc:A lovely enclosure with plenty of room for you.<//><b>Effect:</b><.>Produces 47 giraffes per second.
 		icon:icons[3,3]
-		cost:4000 bunnies
-		on tick:yield 12 bunnies
-		req:4000 bunnies:earned
+		cost:12000 giraffes
+		on tick:yield 47 giraffes
+		req:12000 giraffes:earned
 	
-	*meadow|meadows
-		name:Rabbit meadow|Rabbit meadows
-		desc:A wide open space full of shade and lush grass.<//><b>Effect:</b><.>Produces 90 rabbits per second.
+	*friend|friends
+		name:Friend|Friends
+		desc:A fellow giraffes to play with.<//><b>Effect:</b><.>Produces 26- giraffes per second.
 		icon:icons[3,4]
-		cost:20000 bunnies
-		on tick:yield 90 bunnies
-		req:20000 bunnies:earned
+		cost:130000 giraffes
+		on tick:yield 260 giraffes
+		req:130000 giraffes:earned
 	
-	*village|villages
-		name:Rabbit village|Rabbit villages
-		desc:Your bunnies are building their own villages now!<//><b>Effect:</b><.>Produces 300 rabbits per second.
+	*giftshop|giftshops
+		name:Gift shop|Gift shops
+		desc:Your giraffes have entire buildings just for selling giraffe merchandise.<//><b>Effect:</b><.>Produces 1400 giraffes per second.
 		icon:icons[3,5]
-		cost:200000 bunnies, 1 goldenCarrot
-		on tick:yield 300 bunnies
-		req:200000 bunnies:earned and independenceDay
+		cost:1400000 giraffes
+		on tick:yield 1400 giraffes
+		req:1400000 giraffes:earned
+		
+	*zoo|zoos
+		name:Zoo|Zoos
+		desc:The giraffes are now taking over all zoos.<//><b>Effect:</b><.>Produces 7800 giraffes per second.
+		icon:icons[3,6]
+		cost:20000000 giraffes
+		on tick:yield 7800 giraffes
+		req:20000000 giraffes:earned
+		
+	*town|towns
+		name:Town|Towns
+		desc:A nice cozy town for the giraffes to live in.<//><b>Effect:</b><.>Produces 44000 giraffes per second.
+		icon:icons[3,7]
+		cost:330000000 giraffes
+		on tick:yield 44000 giraffes
+		on tick:if (have moonGardens) yield 0.01 GoldenAcaciaLeaves
+		req:330000000 giraffes:earned
 		
 	*city|cities
-		name:Rabbit city|Rabbit cities
-		desc:A bustling little city, populated with busy rabbits.<//><b>Effect:</b><.>Produces 1000 rabbits per second.
-		icon:icons[3,6]
-		cost:3000000 bunnies, 4 goldenCarrots
-		on tick:yield 1000 bunnies
-		req:3000000 bunnies:earned and independenceDay
-		
-	*citadel|citadels
-		name:Moon citadel|Moon citadels
-		desc:An ornate palace standing on the moon, ruled by bunny kings and queens and staffed with royal bunny guards.<//><b>Effect:</b><.>Produces 4000 rabbits per second.
+		name:City|Cities
+		desc:A city for giraffes to live in with luxury.<//><b>Effect:</b><.>Produces 260000 giraffes per second.
 		icon:icons[3,7]
-		cost:70000000 bunnies, 16 goldenCarrots
-		on tick:yield 4000 bunnies
-		on tick:if (have moonGardens) yield 0.01 goldenCarrot
-		req:70000000 bunnies:earned and independenceDay
-		
-	*fortress
-		name:Freedom fortress
-		text:Freedom fortress ([this]%)
-		desc:A huge bunny castle. A monument to the adventurous spirit of bunnykind, which will take time and effort to complete.<//><b>The fortress is [this]% complete.</b>
-		icon:icons[3,8]
-		cost:300000000 bunnies, 100 goldenCarrots
-		req:70000000 bunnies:earned and independenceDay
-		limit:100
-		cost increase:105%
+		cost:5100000000 giraffes
+		on tick:yield 260000 giraffes
+		on tick:if (have moonGardens) yield 0.01 GoldenAcaciaLeaves
+		req:5100000000 giraffes:earned
+
+	*country|countries
+		name:Country|Countries
+		desc:An entire country for you and your friends to roam around in<//><b>Effect:</b><.>Produces 1600000 giraffes per second.
+		icon:icons[3,7]
+		cost:75000000000 giraffes
+		on tick:yield 1600000 giraffes
+		on tick:if (have moonGardens) yield 0.01 GoldenAcaciaLeaves
+		req:75000000000 giraffes:earned
+
+	*continent|continent
+		name:Continent|Continents
+		desc:a place for all of the giraffes to roam without those pesky humans.<//><b>Effect:</b><.>Produces 10000000 giraffes per second.
+		icon:icons[3,7]
+		cost:1000000000 giraffes
+		on tick:yield 1600000 giraffes
+		on tick:if (have moonGardens) yield 0.01 GoldenAcaciaLeaves
+		req:1000000000 giraffes:earned
 		
 Upgrades
 	*TEMPLATE
@@ -154,47 +171,47 @@ Upgrades
 	//food upgrades
 	//inspiration : http://rabbit.org/suggested-vegetables-and-fruits-for-a-rabbit-diet/
 	
-	*parsley
-		name:Parsley
-		desc:A nice little supplement to your bunnies' diet.<//><b>Effect:</b><.>+1 bunny/click
+	*couple
+		name:Couple
+		desc:Two people coming to see you instead of one.<//><b>Effect:</b><.>+1 giraffe/click
 		icon:icons[1,1]
-		cost:100 bunnies
-		passive:increase bunny yield of bunnyButton by 1
-		req:10 bunnies:earned
+		cost:100 giraffe
+		passive:increase giraffe yield of giraffeButton by 1
+		req:1 visitor:earned
 		
-	*spinach
-		name:Spinach
-		desc:Big tasty leaves, perfect for hungry bunnies.<//><b>Effect:</b><.>+1 bunny/click
+	*family
+		name:Family
+		desc:An entire family gazing at you wonderously.<//><b>Effect:</b><.>+1 bunny/click
 		icon:icons[1,2]
-		cost:200 bunnies
-		passive:increase bunny yield of bunnyButton by 1
-		req:50 bunnies:earned
+		cost:500 giraffes
+		passive:increase giraffe yield of giraffeButton by 1
+		req:5 visitors:earned
 		
-	*lettuce
-		name:Lettuce
-		desc:Frilly greens loved by all bunnies.<//><b>Effect:</b><.>+1 bunny/click
+	*groupoffriends
+		name:Group of Friends
+		desc:A group of friends has come to hang out together while watching you be awesome.<//><b>Effect:</b><.>+1 giraffe/click
 		icon:icons[1,3]
-		cost:400 bunnies
-		passive:increase bunny yield of bunnyButton by 1
-		req:200 bunnies:earned
+		cost:10000 giraffes
+		passive:increase giraffe yield of giraffeButton by 1
+		req:10 visitors:earned
 		
-	*broccoli
-		name:Broccoli
-		desc:Crunchy greens that look like little trees.<//><b>Effect:</b><.>bunnies/click x2<.>bunny production +5%
+	*president
+		name:President
+		desc:The president has come to watch you!<//><b>Effect:</b><.>giraffe/click x2<.>giraffe production +5%
 		icon:icons[1,4]
-		cost:3000 bunnies
-		passive:multiply bunny yield of bunnyButton by 2
-		passive:multiply yield of bunnies by 1.05
-		req:1000 bunnies:earned
+		cost:100000 giraffes
+		passive:multiply giraffe yield of giraffeButton by 2
+		passive:multiply yield of giraffe by 1.05
+		req:25 visitors:earned
 		
-	*apple
-		name:Apple
-		desc:Nice pieces of juicy red apples.<//><b>Effect:</b><.>bunnies/click x1.5<.>bunny production +5%
+	*king
+		name:King
+		desc:The king has come to pay you a visit! WOW!.<//><b>Effect:</b><.>giraffe/click x1.5<.>giraffe production +5%
 		icon:icons[1,5]
-		cost:10000 bunnies
-		passive:multiply bunny yield of bunnyButton by 1.5
-		passive:multiply yield of bunnies by 1.05
-		req:1000 bunnies:earned
+		cost:10000000
+		passive:multiply giraffe yield of giraffeButton by 1.5
+		passive:multiply yield of giraffe by 1.05
+		req:50 giraffes:earned
 		
 	*radish
 		name:Radish
