@@ -82,7 +82,7 @@ Buildings
 	
 	*snack|snacks
 		name:Snack|Snacks
-		desc:A nice little meal.<//><b>Effect:</b><.>Produces 1 giraffe every 2 seconds.
+		desc:A nice little meal.<//><b>Effect:</b><.>Produces 1 giraffe every 1 second.
 		icon:icons[3,1]
 		cost:100 giraffes
 		on tick:yield 0.5 giraffes
@@ -134,7 +134,7 @@ Buildings
 		icon:icons[3,7]
 		cost:330000000 giraffes
 		on tick:yield 44000 giraffes
-		on tick:if (have moonGardens) yield 0.01 GoldenAcaciaLeaves
+		on tick:if (have moonGardens) yield 0.01 goldenAcaciaLeaf
 		req:330000000 giraffes:earned
 		
 	*city|cities
@@ -143,7 +143,7 @@ Buildings
 		icon:icons[3,7]
 		cost:5100000000 giraffes
 		on tick:yield 260000 giraffes
-		on tick:if (have moonGardens) yield 0.01 GoldenAcaciaLeaves
+		on tick:if (have moonGardens) yield 0.01 goldenAcaciaLeaves
 		req:5100000000 giraffes:earned
 
 	*country|countries
@@ -152,7 +152,7 @@ Buildings
 		icon:icons[3,7]
 		cost:75000000000 giraffes
 		on tick:yield 1600000 giraffes
-		on tick:if (have moonGardens) yield 0.01 GoldenAcaciaLeaves
+		on tick:if (have moonGardens) yield 0.01 goldenAcaciaLeaves
 		req:75000000000 giraffes:earned
 
 	*continent|continent
@@ -161,7 +161,7 @@ Buildings
 		icon:icons[3,7]
 		cost:1000000000 giraffes
 		on tick:yield 1600000 giraffes
-		on tick:if (have moonGardens) yield 0.01 GoldenAcaciaLeaves
+		on tick:if (have moonGardens) yield 0.01 goldenAcaciaLeaves
 		req:1000000000 giraffes:earned
 		
 Upgrades
@@ -176,15 +176,15 @@ Upgrades
 		desc:Two people coming to see you instead of one.<//><b>Effect:</b><.>+1 giraffe/click
 		icon:icons[1,1]
 		cost:100 giraffe
-		passive:increase giraffe yield of giraffeButton by 1
+		passive:increase giraffe yield of vistor by 1
 		req:1 visitor:earned
 		
 	*family
 		name:Family
-		desc:An entire family gazing at you wonderously.<//><b>Effect:</b><.>+1 bunny/click
+		desc:An entire family gazing at you loveingly.<//><b>Effect:</b><.>+1 giraffe/click
 		icon:icons[1,2]
 		cost:500 giraffes
-		passive:increase giraffe yield of giraffeButton by 1
+		passive:increase giraffe yield of visitor by 1
 		req:5 visitors:earned
 		
 	*groupoffriends
@@ -192,7 +192,7 @@ Upgrades
 		desc:A group of friends has come to hang out together while watching you be awesome.<//><b>Effect:</b><.>+1 giraffe/click
 		icon:icons[1,3]
 		cost:10000 giraffes
-		passive:increase giraffe yield of giraffeButton by 1
+		passive:increase giraffe yield of visitor by 1
 		req:10 visitors:earned
 		
 	*president
@@ -200,7 +200,7 @@ Upgrades
 		desc:The president has come to watch you!<//><b>Effect:</b><.>giraffe/click x2<.>giraffe production +5%
 		icon:icons[1,4]
 		cost:100000 giraffes
-		passive:multiply giraffe yield of giraffeButton by 2
+		passive:multiply giraffe yield of visitor by 2
 		passive:multiply yield of giraffe by 1.05
 		req:25 visitors:earned
 		
@@ -209,130 +209,97 @@ Upgrades
 		desc:The king has come to pay you a visit! WOW!.<//><b>Effect:</b><.>giraffe/click x1.5<.>giraffe production +5%
 		icon:icons[1,5]
 		cost:10000000
-		passive:multiply giraffe yield of giraffeButton by 1.5
+		passive:multiply giraffe yield of visitor by 1.5
 		passive:multiply yield of giraffe by 1.05
 		req:50 giraffes:earned
 		
-	*radish
-		name:Radish
-		desc:Purple, crunchy, and strangely spicy.<//><b>Effect:</b><.>bunnies/click x1.5<.>bunny production +5%
-		icon:icons[1,6]
-		cost:50000 bunnies
-		passive:multiply bunny yield of bunnyButton by 1.5
-		passive:multiply yield of bunnies by 1.05
-		req:10000 bunnies:earned
-		
-	*mint
-		name:Mint
-		desc:Tasty, and gives your bunnies a lovely breath.<//><b>Effect:</b><.>bunnies/click x1.5<.>bunny production +5%
-		icon:icons[1,7]
-		cost:100000 bunnies
-		passive:multiply bunny yield of bunnyButton by 1.5
-		passive:multiply yield of bunnies by 1.05
-		req:50000 bunnies:earned
-		
-	*chard
-		name:Chard
-		desc:Broad leaves that make for a tasty salad.<//><b>Effect:</b><.>bunnies/click x1.5<.>bunny production +5%
-		icon:icons[1,8]
-		cost:500000 bunnies
-		passive:multiply bunny yield of bunnyButton by 1.5
-		passive:multiply yield of bunnies by 1.05
-		req:100000 bunnies:earned
-		
-	*cherry
-		name:Cherry
-		desc:Your bunnies look like little vampires when they start munching on these!<//><b>Effect:</b><.>bunnies/click x1.5<.>bunny production +5%
-		icon:icons[1,9]
-		cost:1000000 bunnies
-		passive:multiply bunny yield of bunnyButton by 1.5
-		passive:multiply yield of bunnies by 1.05
-		req:500000 bunnies:earned
-		
-	*carrot
-		name:Carrot
-		desc:The quintessential rabbit food! Crunchy, orange, and perfect.<//><b>Effect:</b><.>bunnies/click x2<.>bunny production +10%
-		icon:icons[1,0]
-		cost:100000000 bunnies
-		passive:multiply bunny yield of bunnyButton by 2
-		passive:multiply yield of bunnies by 1.1
-		req:1000000 bunnies:earned
+	
 	
 	//building upgrades
 	
 	*buildingUpgrade1
-		name:Sippy bottles
-		desc:Your bunnies can drink their fill!<//><b>Effect:</b><.>rabbit cage production x2<.>rabbit hutch production x2<.>rabbit coop production x2
+		name:Leaf
+		desc:A leaf for you to eat!<//><b>Effect:</b><.>snack production x2<.>snack production x2<.>
 		icon:icons[2,0] icons[3,0]
 		cost:1000 bunnies
-		passive:multiply yield of cage by 2
-		passive:multiply yield of hutch by 2
-		passive:multiply yield of coop by 2
-		req:(cages>=10 or hutches>=10 or coops>=10)
+		passive:multiply yield of snack by 2
+		req:(hutches>=1)
 		
 	*buildingUpgrade2
-		name:Prime grade hay
-		desc:Not just for horses anymore!<//><b>Effect:</b><.>rabbit cage production x2<.>rabbit hutch production x2<.>rabbit coop production x2
+		name:branch
+		desc:A brach filled with leaves!<//><b>Effect:</b><.>snack production x2
 		icon:icons[2,0] icons[3,1]
-		cost:100000 bunnies
-		passive:multiply yield of cage by 2
-		passive:multiply yield of hutch by 2
-		passive:multiply yield of coop by 2
-		req:(cages>=50 or hutches>=50 or coops>=50)
+		cost:5000 giraffes
+		passive:multiply yield of snack by 2
+		req:(snack>=5)
 		
 	*buildingUpgrade3
-		name:Shredded newspapers
-		desc:You'd think they just poop on these, but they really enjoy reading the Sunday comics.<//><b>Effect:</b><.>rabbit cage production x2<.>rabbit hutch production x2<.>rabbit coop production x2
+		name:meal
+		desc:A meal filled with yummy food!<//><b>Effect:</b><.>snack production x2
 		icon:icons[2,0] icons[3,2]
 		cost:5000000 bunnies
-		passive:multiply yield of cage by 2
-		passive:multiply yield of hutch by 2
-		passive:multiply yield of coop by 2
-		req:(cages>=100 or hutches>=100 or coops>=100)
+		passive:multiply yield of snack by 2
+		req:(hutches>=25)
 		
 	*buildingUpgrade4
-		name:Pretty fences
-		desc:Just the right size so your bunnies can peek through but not hop over!<//><b>Effect:</b><.>rabbit pen production x2<.>rabbit meadow production x2
+		name:feast
+		desc:A feast for you and all of your giraffe friends.<//><b>Effect:</b><.>snack production x2
 		icon:icons[2,0] icons[3,3]
-		cost:50000 bunnies
-		passive:multiply yield of pen by 2
-		passive:multiply yield of meadow by 2
-		req:(pens>=10 or meadows>=10)
+		cost:5000000 giraffes
+		passive:multiply yield of snack by 2
+		req:(snack>=50)
 		
 	*buildingUpgrade5
-		name:Bunny playground
-		desc:If your bunnies are outside, they might as well get some exercise!<//><b>Effect:</b><.>rabbit pen production x2<.>rabbit meadow production x2
+		name:all you can eat buffet
+		desc:SO. MUCH. FOOOOOOOOOOD.><//><b>Effect:</b><.>snack production x2<.>
 		icon:icons[2,0] icons[3,4]
+		cost:500000000 giraffes
+		passive:multiply yield of snack by 2
+		req:(snack>=100)	
+
+
+	//building upgrades
+	
+	*buildingUpgrade1
+		name:Leaf
+		desc:A leaf for you to eat!<//><b>Effect:</b><.>snack production x2<.>snack production x2<.>
+		icon:icons[2,0] icons[3,0]
+		cost:1000 bunnies
+		passive:multiply yield of snack by 2
+		req:(hutches>=1)
+		
+	*buildingUpgrade2
+		name:branch
+		desc:A brach filled with leaves!<//><b>Effect:</b><.>snack production x2
+		icon:icons[2,0] icons[3,1]
+		cost:5000 giraffes
+		passive:multiply yield of snack by 2
+		req:(snack>=5)
+		
+	*buildingUpgrade3
+		name:meal
+		desc:A meal filled with yummy food!<//><b>Effect:</b><.>snack production x2
+		icon:icons[2,0] icons[3,2]
 		cost:5000000 bunnies
-		passive:multiply yield of pen by 2
-		passive:multiply yield of meadow by 2
-		req:(pens>=50 or meadows>=50)
+		passive:multiply yield of snack by 2
+		req:(hutches>=25)
 		
-	*buildingUpgrade6
-		name:Bunny TVs
-		desc:Televisions that broadcast bunny cartoons, bunny sitcoms, and bunny news bulletins.<//><b>Effect:</b><.>rabbit village production x2<.>rabbit city production x2
-		icon:icons[2,0] icons[3,5]
-		cost:1000000 bunnies
-		passive:multiply yield of village by 2
-		passive:multiply yield of city by 2
-		req:(villages>=10 or cities>=10)
+	*buildingUpgrade4
+		name:feast
+		desc:A feast for you and all of your giraffe friends.<//><b>Effect:</b><.>snack production x2
+		icon:icons[2,0] icons[3,3]
+		cost:5000000 giraffes
+		passive:multiply yield of snack by 2
+		req:(snack>=50)
 		
-	*buildingUpgrade7
-		name:Wee little bunny cars
-		desc:Your bunnies drive around in these. How nice!<//><b>Effect:</b><.>rabbit village production x2<.>rabbit city production x2
-		icon:icons[2,0] icons[3,6]
-		cost:500000000 bunnies
-		passive:multiply yield of village by 2
-		passive:multiply yield of city by 2
-		req:(villages>=50 or cities>=50)
+	*buildingUpgrade5
+		name:all you can eat buffet
+		desc:SO. MUCH. FOOOOOOOOOOD.><//><b>Effect:</b><.>snack production x2<.>
+		icon:icons[2,0] icons[3,4]
+		cost:500000000 giraffes
+		passive:multiply yield of snack by 2
+		req:(snack>=100)
 		
-	*buildingUpgrade8
-		name:Soothing moon crystals
-		desc:Just really nice to be around.<//><b>Effect:</b><.>moon citadel production x2
-		icon:icons[2,0] icons[3,7]
-		cost:1000000000 bunnies
-		passive:multiply yield of citadel by 2
-		req:10 citadels
 		
 	//golden carrot upgrades
 	
