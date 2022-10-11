@@ -1,0 +1,448 @@
+Let's make a game!
+	name:Giraffe Clicker
+	by:JimBobGiraffe
+	desc:This is pretty much Cookie Clicker reskinned for people who like giraffes more than cookies	
+	created:9-26-2022
+	updated:unknown
+	version:1
+
+Settings
+	background:stuff/meadow.jpg
+	building cost increase:115%
+	building cost refund:50%
+	spritesheet:icons, 48 by 48, stuff/bunnyIcons.png
+	stylesheet:stuff/bigBlue.css
+
+Layout
+	use default
+		
+Buttons
+	*GiraffeButton
+		name:Make a giraffe
+		desc:Click this giraffe to get more giraffes!
+		on click:anim icon wobble
+		on click:yield 1 giraffe
+		on click:if (have goldenTouch and chance(1%)) yield 1 goldenAcaciaLeaf
+		icon:stuff/bunny.png
+		no text
+		class:bigButton hasFlares
+		icon class:shadowed
+		tooltip origin:bottom
+		tooltip class:red
+		
+Resources
+	*giraffe|giraffes
+		name:Giraffe|Giraffes
+		desc:These are your giraffes. You can use them to purchase things. Your goal is to have as many giraffes as possible!
+		icon:icons[0,0]
+		class:noBackground
+		show earned
+		
+	*goldenAcaciaLeaf|goldenAcaciaLeaves
+		name:Golden acacia leaf|Golden acacia leaves
+		desc:These shiny acacia leaves are terribly rare, terribly precious and terribly delicious!
+		icon:icons[0,1]
+		class:noBackground
+		hidden when 0
+		
+Shinies
+	*luckyGiraffe
+		on click:log Woop
+		movement:onRight moveLeft fade bounce:0.05
+		frequency:60
+		frequency variation:30
+		icon:stuff/luckyGiraffe.png
+		class:bigButton
+		on click:
+			$boost=1
+			if (have clover) $boost=4
+			if (chance(5%))
+				//get at least 7, or between 1 and 3 minutes of our giraffe production
+				$amount=max(7,random(giraffes:ps*60*1,giraffes:ps*60*3))*$boost
+				toast The lucky giraffe grants you<//><b>[$amount] giraffe</b>.
+				yield $amount giraffes
+			else
+				$amount=1*$boost
+				toast The lucky giraffe grants you<//><b>[$amount] golden acacia leaves[s?$amount]</b>!
+				yield $amount goldenAcaciaLeaf
+			end
+		end
+
+Buildings
+	*TEMPLATE
+		on click:anim glow
+		
+	*visitor|visitors
+		name:Visitor|Visitors
+		desc:A simple person watching you who only encourages.<//><b>Effect:</b><.>Produces 1 giraffe every 10 seconds.
+		icon:icons[3,0]
+		cost:15 giraffes
+		on tick:yield 0.1 giraffe
+		unlocked
+	
+	*snack|snacks
+		name:Snack|Snacks
+		desc:A nice little meal.<//><b>Effect:</b><.>Produces 1 giraffe every 2 seconds.
+		icon:icons[3,1]
+		cost:100 giraffes
+		on tick:yield 0.5 giraffes
+		req:100 giraffes:earned
+	
+	*keeper|keepers
+		name:Keeper|Keepers
+		desc:A kind zookeeper helping to take care of you<//><b>Effect:</b><.>Produces 8 giraffes per second.
+		icon:icons[3,2]
+		cost:1100 giraffes
+		on tick:yield 8 giraffes
+		req:1100 giraffes:earned
+	
+	*habitat|habitats
+		name:Habitat|Habitats
+		desc:A lovely enclosure with plenty of room for you.<//><b>Effect:</b><.>Produces 47 giraffes per second.
+		icon:icons[3,3]
+		cost:12000 giraffes
+		on tick:yield 47 giraffes
+		req:12000 giraffes:earned
+	
+	*friend|friends
+		name:Friend|Friends
+		desc:A fellow giraffes to play with.<//><b>Effect:</b><.>Produces 26- giraffes per second.
+		icon:icons[3,4]
+		cost:130000 giraffes
+		on tick:yield 260 giraffes
+		req:130000 giraffes:earned
+	
+	*giftshop|giftshops
+		name:Gift shop|Gift shops
+		desc:Your giraffes have entire buildings just for selling giraffe merchandise.<//><b>Effect:</b><.>Produces 1400 giraffes per second.
+		icon:icons[3,5]
+		cost:1400000 giraffes
+		on tick:yield 1400 giraffes
+		req:1400000 giraffes:earned
+		
+	*zoo|zoos
+		name:Zoo|Zoos
+		desc:The giraffes are now taking over all zoos.<//><b>Effect:</b><.>Produces 7800 giraffes per second.
+		icon:icons[3,6]
+		cost:20000000 giraffes
+		on tick:yield 7800 giraffes
+		req:20000000 giraffes:earned
+		
+	*town|towns
+		name:Town|Towns
+		desc:A nice cozy town for the giraffes to live in.<//><b>Effect:</b><.>Produces 44000 giraffes per second.
+		icon:icons[3,7]
+		cost:330000000 giraffes
+		on tick:yield 44000 giraffes
+		on tick:if (have moonGardens) yield 0.01 GoldenAcaciaLeaves
+		req:330000000 giraffes:earned
+		
+	*city|cities
+		name:City|Cities
+		desc:A city for giraffes to live in with luxury.<//><b>Effect:</b><.>Produces 260000 giraffes per second.
+		icon:icons[3,7]
+		cost:5100000000 giraffes
+		on tick:yield 260000 giraffes
+		on tick:if (have moonGardens) yield 0.01 GoldenAcaciaLeaves
+		req:5100000000 giraffes:earned
+
+	*country|countries
+		name:Country|Countries
+		desc:An entire country for you and your friends to roam around in<//><b>Effect:</b><.>Produces 1600000 giraffes per second.
+		icon:icons[3,7]
+		cost:75000000000 giraffes
+		on tick:yield 1600000 giraffes
+		on tick:if (have moonGardens) yield 0.01 GoldenAcaciaLeaves
+		req:75000000000 giraffes:earned
+
+	*continent|continent
+		name:Continent|Continents
+		desc:a place for all of the giraffes to roam without those pesky humans.<//><b>Effect:</b><.>Produces 10000000 giraffes per second.
+		icon:icons[3,7]
+		cost:1000000000 giraffes
+		on tick:yield 1600000 giraffes
+		on tick:if (have moonGardens) yield 0.01 GoldenAcaciaLeaves
+		req:1000000000 giraffes:earned
+		
+Upgrades
+	*TEMPLATE
+		on click:anim glow
+	
+	//food upgrades
+	//inspiration : http://rabbit.org/suggested-vegetables-and-fruits-for-a-rabbit-diet/
+	
+	*couple
+		name:Couple
+		desc:Two people coming to see you instead of one.<//><b>Effect:</b><.>+1 giraffe/click
+		icon:icons[1,1]
+		cost:100 giraffe
+		passive:increase giraffe yield of giraffeButton by 1
+		req:1 visitor:earned
+		
+	*family
+		name:Family
+		desc:An entire family gazing at you wonderously.<//><b>Effect:</b><.>+1 bunny/click
+		icon:icons[1,2]
+		cost:500 giraffes
+		passive:increase giraffe yield of giraffeButton by 1
+		req:5 visitors:earned
+		
+	*groupoffriends
+		name:Group of Friends
+		desc:A group of friends has come to hang out together while watching you be awesome.<//><b>Effect:</b><.>+1 giraffe/click
+		icon:icons[1,3]
+		cost:10000 giraffes
+		passive:increase giraffe yield of giraffeButton by 1
+		req:10 visitors:earned
+		
+	*president
+		name:President
+		desc:The president has come to watch you!<//><b>Effect:</b><.>giraffe/click x2<.>giraffe production +5%
+		icon:icons[1,4]
+		cost:100000 giraffes
+		passive:multiply giraffe yield of giraffeButton by 2
+		passive:multiply yield of giraffe by 1.05
+		req:25 visitors:earned
+		
+	*king
+		name:King
+		desc:The king has come to pay you a visit! WOW!.<//><b>Effect:</b><.>giraffe/click x1.5<.>giraffe production +5%
+		icon:icons[1,5]
+		cost:10000000
+		passive:multiply giraffe yield of giraffeButton by 1.5
+		passive:multiply yield of giraffe by 1.05
+		req:50 giraffes:earned
+		
+	*radish
+		name:Radish
+		desc:Purple, crunchy, and strangely spicy.<//><b>Effect:</b><.>bunnies/click x1.5<.>bunny production +5%
+		icon:icons[1,6]
+		cost:50000 bunnies
+		passive:multiply bunny yield of bunnyButton by 1.5
+		passive:multiply yield of bunnies by 1.05
+		req:10000 bunnies:earned
+		
+	*mint
+		name:Mint
+		desc:Tasty, and gives your bunnies a lovely breath.<//><b>Effect:</b><.>bunnies/click x1.5<.>bunny production +5%
+		icon:icons[1,7]
+		cost:100000 bunnies
+		passive:multiply bunny yield of bunnyButton by 1.5
+		passive:multiply yield of bunnies by 1.05
+		req:50000 bunnies:earned
+		
+	*chard
+		name:Chard
+		desc:Broad leaves that make for a tasty salad.<//><b>Effect:</b><.>bunnies/click x1.5<.>bunny production +5%
+		icon:icons[1,8]
+		cost:500000 bunnies
+		passive:multiply bunny yield of bunnyButton by 1.5
+		passive:multiply yield of bunnies by 1.05
+		req:100000 bunnies:earned
+		
+	*cherry
+		name:Cherry
+		desc:Your bunnies look like little vampires when they start munching on these!<//><b>Effect:</b><.>bunnies/click x1.5<.>bunny production +5%
+		icon:icons[1,9]
+		cost:1000000 bunnies
+		passive:multiply bunny yield of bunnyButton by 1.5
+		passive:multiply yield of bunnies by 1.05
+		req:500000 bunnies:earned
+		
+	*carrot
+		name:Carrot
+		desc:The quintessential rabbit food! Crunchy, orange, and perfect.<//><b>Effect:</b><.>bunnies/click x2<.>bunny production +10%
+		icon:icons[1,0]
+		cost:100000000 bunnies
+		passive:multiply bunny yield of bunnyButton by 2
+		passive:multiply yield of bunnies by 1.1
+		req:1000000 bunnies:earned
+	
+	//building upgrades
+	
+	*buildingUpgrade1
+		name:Sippy bottles
+		desc:Your bunnies can drink their fill!<//><b>Effect:</b><.>rabbit cage production x2<.>rabbit hutch production x2<.>rabbit coop production x2
+		icon:icons[2,0] icons[3,0]
+		cost:1000 bunnies
+		passive:multiply yield of cage by 2
+		passive:multiply yield of hutch by 2
+		passive:multiply yield of coop by 2
+		req:(cages>=10 or hutches>=10 or coops>=10)
+		
+	*buildingUpgrade2
+		name:Prime grade hay
+		desc:Not just for horses anymore!<//><b>Effect:</b><.>rabbit cage production x2<.>rabbit hutch production x2<.>rabbit coop production x2
+		icon:icons[2,0] icons[3,1]
+		cost:100000 bunnies
+		passive:multiply yield of cage by 2
+		passive:multiply yield of hutch by 2
+		passive:multiply yield of coop by 2
+		req:(cages>=50 or hutches>=50 or coops>=50)
+		
+	*buildingUpgrade3
+		name:Shredded newspapers
+		desc:You'd think they just poop on these, but they really enjoy reading the Sunday comics.<//><b>Effect:</b><.>rabbit cage production x2<.>rabbit hutch production x2<.>rabbit coop production x2
+		icon:icons[2,0] icons[3,2]
+		cost:5000000 bunnies
+		passive:multiply yield of cage by 2
+		passive:multiply yield of hutch by 2
+		passive:multiply yield of coop by 2
+		req:(cages>=100 or hutches>=100 or coops>=100)
+		
+	*buildingUpgrade4
+		name:Pretty fences
+		desc:Just the right size so your bunnies can peek through but not hop over!<//><b>Effect:</b><.>rabbit pen production x2<.>rabbit meadow production x2
+		icon:icons[2,0] icons[3,3]
+		cost:50000 bunnies
+		passive:multiply yield of pen by 2
+		passive:multiply yield of meadow by 2
+		req:(pens>=10 or meadows>=10)
+		
+	*buildingUpgrade5
+		name:Bunny playground
+		desc:If your bunnies are outside, they might as well get some exercise!<//><b>Effect:</b><.>rabbit pen production x2<.>rabbit meadow production x2
+		icon:icons[2,0] icons[3,4]
+		cost:5000000 bunnies
+		passive:multiply yield of pen by 2
+		passive:multiply yield of meadow by 2
+		req:(pens>=50 or meadows>=50)
+		
+	*buildingUpgrade6
+		name:Bunny TVs
+		desc:Televisions that broadcast bunny cartoons, bunny sitcoms, and bunny news bulletins.<//><b>Effect:</b><.>rabbit village production x2<.>rabbit city production x2
+		icon:icons[2,0] icons[3,5]
+		cost:1000000 bunnies
+		passive:multiply yield of village by 2
+		passive:multiply yield of city by 2
+		req:(villages>=10 or cities>=10)
+		
+	*buildingUpgrade7
+		name:Wee little bunny cars
+		desc:Your bunnies drive around in these. How nice!<//><b>Effect:</b><.>rabbit village production x2<.>rabbit city production x2
+		icon:icons[2,0] icons[3,6]
+		cost:500000000 bunnies
+		passive:multiply yield of village by 2
+		passive:multiply yield of city by 2
+		req:(villages>=50 or cities>=50)
+		
+	*buildingUpgrade8
+		name:Soothing moon crystals
+		desc:Just really nice to be around.<//><b>Effect:</b><.>moon citadel production x2
+		icon:icons[2,0] icons[3,7]
+		cost:1000000000 bunnies
+		passive:multiply yield of citadel by 2
+		req:10 citadels
+		
+	//golden carrot upgrades
+	
+	*goldenTouch
+		name:Golden touch
+		desc:The delicate art of finding vegetables made of precious metals.<//><b>Effect:</b><.>1% chance of gaining 1 golden carrot per bunny click
+		icon:icons[2,5]
+		cost:1 goldenCarrot
+		req:1 goldenCarrot:earned
+		
+	*rabbitHaste
+		name:Rabbit's haste
+		desc:I'm late! I'm late! For a very important date!<//><b>Effect:</b><.>lucky bunnies appear 30% more often
+		icon:icons[2,6]
+		passive:multiply frequency of luckyBunny by 0.7
+		cost:5 goldenCarrots
+		req:1 goldenCarrot:earned
+	
+	*independenceDay
+		name:Independence day
+		desc:Your bunnies are making their first step towards declaring their independence from the oppressive shackles of pens and cages.<//><b>Effect:</b><.>unlocks new buildings
+		icon:icons[2,7]
+		cost:10 goldenCarrots
+		req:5 goldenCarrots:earned
+		
+	*clover
+		name:Clover
+		desc:A delicious herb that tastes lucky.<//><b>Effect:</b><.>lucky bunny effects are 4 times more powerful
+		icon:icons[2,8]
+		cost:100 goldenCarrots
+		req:50 goldenCarrots:earned
+		
+	*moonGardens
+		name:Moon gardens
+		desc:The royal botanists in your moon citadels have found new ways of cultivating plants in reduced gravity!<//><b>Effect:</b><.>moon citadels now produce 1 golden carrot every 100 seconds
+		icon:icons[2,9]
+		cost:100 goldenCarrots
+		req:50 goldenCarrots:earned
+		
+Achievements
+	*TEMPLATE
+		on click:anim glow
+		
+	*bunnyAchiev1
+		name:Run rabbit run
+		desc:Have <b>1</b> bunny.
+		req:1 bunny
+		icon:icons[2,4] icons[0,2] icons[0,6]
+	*bunnyAchiev2
+		name:Bunniest home videos
+		desc:Have <b>1000</b> bunnies.
+		req:1000 bunnies
+		icon:icons[2,4] icons[0,3] icons[0,6]
+	*bunnyAchiev3
+		name:You got buns, hun
+		desc:Have <b>1000000</b> bunnies.
+		req:10000000 bunnies
+		icon:icons[2,4] icons[0,4] icons[0,6]
+		
+	*clickAchiev1
+		name:That tickles
+		desc:Click the bunny <b>10</b> times.
+		req:10 bunnyButton clicks
+		icon:icons[2,2] icons[0,2] icons[0,6]
+	*clickAchiev2
+		name:Don't squeeze me I'll fart
+		desc:Click the bunny <b>100</b> times.
+		req:100 bunnyButton clicks
+		icon:icons[2,2] icons[0,3] icons[0,6]
+	*clickAchiev3
+		name:You're cruising for a bruising, dude
+		desc:Click the bunny <b>2000</b> times.
+		req:2000 bunnyButton clicks
+		icon:icons[2,2] icons[0,4] icons[0,6]
+		
+	*bunnyPsAchiev1
+		name:Be vewy vewy quiet
+		desc:Produce <b>10</b> bunnies per second.
+		req:10 bunnies per second
+		icon:icons[2,3] icons[0,2] icons[0,6]
+	*bunnyPsAchiev2
+		name:Hop and a skip
+		desc:Produce <b>1000</b> bunnies per second.
+		req:1000 bunnies per second
+		icon:icons[2,3] icons[0,3] icons[0,6]
+	*bunnyPsAchiev3
+		name:Go forth and multiply
+		desc:Produce <b>100000</b> bunnies per second.
+		req:100000 bunnies per second
+		icon:icons[2,3] icons[0,4] icons[0,6]
+		
+	*carrotAchiev1
+		name:Isn't it neat
+		desc:Have <b>1</b> golden carrot.
+		req:1 goldenCarrot
+		icon:icons[0,1] icons[0,2]
+	*carrotAchiev2
+		name:All that glitters
+		desc:Have <b>100</b> golden carrots.
+		req:100 goldenCarrot
+		icon:icons[0,1] icons[0,3]
+	*carrotAchiev3
+		name:Zero nutritional value
+		desc:Have <b>1000</b> golden carrots.
+		req:1000 goldenCarrot
+		icon:icons[0,1] icons[0,4]
+	
+	*fortressAchiev
+		name:Freedom!
+		desc:Complete building the <b>freedom fortress</b>.<//>This is it. You beat the game!
+		req:100 fortress
+		icon:icons[3,8] icons[0,4]
+		
