@@ -134,7 +134,7 @@ Buildings
 		icon:icons[3,7]
 		cost:330000000 giraffes
 		on tick:yield 44000 giraffes
-		on tick:if (have moonGardens) yield 0.01 GoldenAcaciaLeaves
+		on tick:if (have moonGardens) yield 0.01 goldenAcaciaLeaves
 		req:330000000 giraffes:earned
 		
 	*city|cities
