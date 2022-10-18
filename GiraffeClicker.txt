@@ -176,7 +176,7 @@ Upgrades
 		desc:Two people coming to see you instead of one.<//><b>Effect:</b><.>+1 giraffe/click
 		icon:icons[1,1]
 		cost:100 giraffe
-		passive:increase giraffe yield of visitor by 1
+		passive:increase giraffe yield of vistor by 1
 		req:1 visitor:earned
 		
 	*family
@@ -223,7 +223,7 @@ Upgrades
 		icon:icons[2,0] icons[3,0]
 		cost:1000 bunnies
 		passive:multiply yield of snack by 2
-		req:(hutches>=1)
+		req:(snack>=1)
 		
 	*branch
 		name:Branch
@@ -239,7 +239,7 @@ Upgrades
 		icon:icons[2,0] icons[3,2]
 		cost:5000000 bunnies
 		passive:multiply yield of snack by 2
-		req:(hutches>=25)
+		req:(snack>=25)
 		
 	*feast
 		name:Feast
