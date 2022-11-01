@@ -207,7 +207,7 @@ Upgrades
 		cost:10000000
 		passive:multiply giraffe yield of visitor by 1.5
 		passive:multiply yield of giraffe by 1.05
-		req:50 giraffes:earned
+		req:1000000 giraffes:earned
 		
 	
 	
