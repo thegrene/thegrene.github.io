@@ -55,7 +55,7 @@ Shinies
 		class:bigButton
 		on click:
 			$boost=1
-			if (have clover) $boost=4
+			if (have golden branch) $boost=4
 			if (chance(5%))
 				//get at least 7, or between 1 and 3 minutes of our giraffe production
 				$amount=max(7,random(giraffes:ps*60*1,giraffes:ps*60*3))*$boost
