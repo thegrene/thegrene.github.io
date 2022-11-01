@@ -300,48 +300,7 @@ Upgrades
 		passive:multiply yield of keeper by 2
 		req:(keeper>=100)
 		
-//building upgrades
-	
-	*hat
-		name:Hat
-		desc:A hat to keep your servants nice and cool.<//><b>Effect:</b><.>keeper production x2<.>keeper production x2<.>
-		icon:icons[2,0] icons[3,0]
-		cost:11000 giraffes
-		passive:multiply yield of keeper by 2
-		req:(keeper>=1)
-		
-	*jacket
-		name:Jacket
-		desc:A jacket so that your servants won't freeze during the cold<//><b>Effect:</b><.>keeper production x2
-		icon:icons[2,0] icons[3,1]
-		cost:55000 giraffes
-		passive:multiply yield of keeper by 2
-		req:(keeper>=5)
-		
-	*education
-		name:Education
-		desc:You can now teach your servants how to be better at their job.<//><b>Effect:</b><.>keeper production x2
-		icon:icons[2,0] icons[3,2]
-		cost:550000 giraffes
-		passive:multiply yield of keeper by 2
-		req:(keepers>=25)
-		
-	*tools
-		name:Tools
-		desc:Tools to help the servants with their job.<//><b>Effect:</b><.>keeper production x2
-		icon:icons[2,0] icons[3,3]
-		cost:55000000 giraffes
-		passive:multiply yield of keeper by 2
-		req:(keeper>=50)
-		
-	*food
-		name:Food
-		desc:Food so that the servants can feed you.><//><b>Effect:</b><.>keeper production x2<.>
-		icon:icons[2,0] icons[3,4]
-		cost:5500000000 giraffes
-		passive:multiply yield of keeper by 2
-		req:(keeper>=100)
-		
+
 	//golden acacia leaves upgrades
 	
 	*goldenAcaciaBranch
