@@ -181,7 +181,7 @@ Upgrades
 		
 	*family
 		name:Family
-		desc:An entire family gazing at you loveingly.<//><b>Effect:</b><.>+1 giraffe/click
+		desc:An entire family gazing at you lovingly.<//><b>Effect:</b><.>+1 giraffe/click
 		icon:icons[1,2]
 		cost:500 giraffes
 		passive:increase giraffe yield of visitor by 1
@@ -300,116 +300,134 @@ Upgrades
 		passive:multiply yield of keeper by 2
 		req:(keeper>=100)
 		
-		
-	//golden carrot upgrades
+//building upgrades
 	
-	*goldenTouch
-		name:Golden touch
-		desc:The delicate art of finding vegetables made of precious metals.<//><b>Effect:</b><.>1% chance of gaining 1 golden carrot per bunny click
+	*hat
+		name:Hat
+		desc:A hat to keep your servants nice and cool.<//><b>Effect:</b><.>keeper production x2<.>keeper production x2<.>
+		icon:icons[2,0] icons[3,0]
+		cost:11000 giraffes
+		passive:multiply yield of keeper by 2
+		req:(keeper>=1)
+		
+	*jacket
+		name:Jacket
+		desc:A jacket so that your servants won't freeze during the cold<//><b>Effect:</b><.>keeper production x2
+		icon:icons[2,0] icons[3,1]
+		cost:55000 giraffes
+		passive:multiply yield of keeper by 2
+		req:(keeper>=5)
+		
+	*education
+		name:Education
+		desc:You can now teach your servants how to be better at their job.<//><b>Effect:</b><.>keeper production x2
+		icon:icons[2,0] icons[3,2]
+		cost:550000 giraffes
+		passive:multiply yield of keeper by 2
+		req:(keepers>=25)
+		
+	*tools
+		name:Tools
+		desc:Tools to help the servants with their job.<//><b>Effect:</b><.>keeper production x2
+		icon:icons[2,0] icons[3,3]
+		cost:55000000 giraffes
+		passive:multiply yield of keeper by 2
+		req:(keeper>=50)
+		
+	*food
+		name:Food
+		desc:Food so that the servants can feed you.><//><b>Effect:</b><.>keeper production x2<.>
+		icon:icons[2,0] icons[3,4]
+		cost:5500000000 giraffes
+		passive:multiply yield of keeper by 2
+		req:(keeper>=100)
+		
+	//golden acacia leaves upgrades
+	
+	*goldenAcaciaBranch
+		name:Golden Acacia Branch
+		desc:A branch that tastes like sunlight.<//><b>Effect:</b><.>1% chance of gaining 1 golden acacia leaf per giraffe click
 		icon:icons[2,5]
-		cost:1 goldenCarrot
-		req:1 goldenCarrot:earned
+		cost:1 goldenAcaciaLeaf
+		req:1 goldenAcaciaLeaf:earned
 		
-	*rabbitHaste
-		name:Rabbit's haste
-		desc:I'm late! I'm late! For a very important date!<//><b>Effect:</b><.>lucky bunnies appear 30% more often
+	*goldenSpring
+		name:Golden Spring
+		desc:Spring has come.<//><b>Effect:</b><.>lucky giraffes appear 30% more often
 		icon:icons[2,6]
-		passive:multiply frequency of luckyBunny by 0.7
-		cost:5 goldenCarrots
-		req:1 goldenCarrot:earned
+		passive:multiply frequency of luckyGiraffe by 0.7
+		cost:5 goldenAcaciaLeaves
+		req:1 goldenAcaciaLeaf:earned
 	
-	*independenceDay
-		name:Independence day
-		desc:Your bunnies are making their first step towards declaring their independence from the oppressive shackles of pens and cages.<//><b>Effect:</b><.>unlocks new buildings
-		icon:icons[2,7]
-		cost:10 goldenCarrots
-		req:5 goldenCarrots:earned
-		
-	*clover
-		name:Clover
-		desc:A delicious herb that tastes lucky.<//><b>Effect:</b><.>lucky bunny effects are 4 times more powerful
-		icon:icons[2,8]
-		cost:100 goldenCarrots
-		req:50 goldenCarrots:earned
-		
-	*moonGardens
-		name:Moon gardens
-		desc:The royal botanists in your moon citadels have found new ways of cultivating plants in reduced gravity!<//><b>Effect:</b><.>moon citadels now produce 1 golden carrot every 100 seconds
-		icon:icons[2,9]
-		cost:100 goldenCarrots
-		req:50 goldenCarrots:earned
-		
 Achievements
 	*TEMPLATE
 		on click:anim glow
 		
-	*bunnyAchiev1
-		name:Run rabbit run
-		desc:Have <b>1</b> bunny.
-		req:1 bunny
+	*giraffeAchiev1
+		name:The First Step
+		desc:Have <b>1</b> giraffe.
+		req:1 giraffe
 		icon:icons[2,4] icons[0,2] icons[0,6]
-	*bunnyAchiev2
-		name:Bunniest home videos
-		desc:Have <b>1000</b> bunnies.
-		req:1000 bunnies
+	*giraffeAchiev2
+		name:The Tower Has Been Built
+		desc:Have <b>1000</b> giraffes.
+		req:1000 giraffes
 		icon:icons[2,4] icons[0,3] icons[0,6]
-	*bunnyAchiev3
-		name:You got buns, hun
-		desc:Have <b>1000000</b> bunnies.
-		req:10000000 bunnies
+	*giraffeAchiev3
+		name:Why are giraffes so tall?
+		desc:Have <b>1000000</b> giraffes.
+		req:10000000 giraffes
+		icon:icons[2,4] icons[0,4] icons[0,6]
+	*giraffeAchiev4
+		name:So they can tower over everybody
+		desc:Have <b>1000000000</b> giraffes.
+		req:10000000000 giraffes
 		icon:icons[2,4] icons[0,4] icons[0,6]
 		
 	*clickAchiev1
 		name:That tickles
-		desc:Click the bunny <b>10</b> times.
-		req:10 bunnyButton clicks
+		desc:Click the giraffe <b>10</b> times.
+		req:10 giraffeButton clicks
 		icon:icons[2,2] icons[0,2] icons[0,6]
 	*clickAchiev2
-		name:Don't squeeze me I'll fart
-		desc:Click the bunny <b>100</b> times.
-		req:100 bunnyButton clicks
+		name:If you keep doing this, I'll kick you
+		desc:Click the giraffe <b>100</b> times.
+		req:100 giraffeButton clicks
 		icon:icons[2,2] icons[0,3] icons[0,6]
 	*clickAchiev3
-		name:You're cruising for a bruising, dude
-		desc:Click the bunny <b>2000</b> times.
-		req:2000 bunnyButton clicks
+		name:no, really, I will actually kick you
+		desc:Click the giraffe <b>2000</b> times.
+		req:2000 giraffeButton clicks
 		icon:icons[2,2] icons[0,4] icons[0,6]
 		
-	*bunnyPsAchiev1
-		name:Be vewy vewy quiet
-		desc:Produce <b>10</b> bunnies per second.
-		req:10 bunnies per second
+	*giraffePsAchiev1
+		name:Run big bois, run!
+		desc:Produce <b>10</b> giraffe per second.
+		req:10 giraffes per second
 		icon:icons[2,3] icons[0,2] icons[0,6]
-	*bunnyPsAchiev2
-		name:Hop and a skip
-		desc:Produce <b>1000</b> bunnies per second.
-		req:1000 bunnies per second
+	*giraffePsAchiev2
+		name:Dats a lot o giraffes
+		desc:Produce <b>1000</b> giraffes per second.
+		req:1000 giraffes per second
 		icon:icons[2,3] icons[0,3] icons[0,6]
-	*bunnyPsAchiev3
-		name:Go forth and multiply
-		desc:Produce <b>100000</b> bunnies per second.
-		req:100000 bunnies per second
+	*giraffePsAchiev3
+		name:Giraffe Land has risen
+		desc:Produce <b>100000</b> giraffes per second.
+		req:100000 giraffes per second
 		icon:icons[2,3] icons[0,4] icons[0,6]
 		
-	*carrotAchiev1
-		name:Isn't it neat
-		desc:Have <b>1</b> golden carrot.
-		req:1 goldenCarrot
+	*acaciaLeafAchiev1
+		name:Golden food
+		desc:Have <b>1</b> goldenAcaciaLeaf.
+		req:1 goldenAcaciaLeaf
 		icon:icons[0,1] icons[0,2]
-	*carrotAchiev2
-		name:All that glitters
-		desc:Have <b>100</b> golden carrots.
-		req:100 goldenCarrot
+	*acaciaLeafAchiev2
+		name:Golden Lunchbox
+		desc:Have <b>100</b> goldenAcaciaLeaves.
+		req:100 goldenAcaciaLeaves
 		icon:icons[0,1] icons[0,3]
-	*carrotAchiev3
-		name:Zero nutritional value
-		desc:Have <b>1000</b> golden carrots.
-		req:1000 goldenCarrot
+	*acaciaLeavesAchiev3
+		name:Golden Feast
+		desc:Have <b>1000</b> goldenAcaciaLeaves.
+		req:1000 goldenAcaciaLeaves
 		icon:icons[0,1] icons[0,4]
-	
-	*fortressAchiev
-		name:Freedom!
-		desc:Complete building the <b>freedom fortress</b>.<//>This is it. You beat the game!
-		req:100 fortress
-		icon:icons[3,8] icons[0,4]
-		
