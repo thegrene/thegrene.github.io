@@ -134,7 +134,6 @@ Buildings
 		icon:icons[3,7]
 		cost:330000000 giraffes
 		on tick:yield 44000 giraffes
-		on tick:if (have moonGardens) yield 0.01 goldenAcaciaLeaf
 		req:330000000 giraffes:earned
 		
 	*city|cities
@@ -143,7 +142,6 @@ Buildings
 		icon:icons[3,7]
 		cost:5100000000 giraffes
 		on tick:yield 260000 giraffes
-		on tick:if (have moonGardens) yield 0.01 goldenAcaciaLeaves
 		req:5100000000 giraffes:earned
 
 	*country|countries
@@ -152,7 +150,6 @@ Buildings
 		icon:icons[3,7]
 		cost:75000000000 giraffes
 		on tick:yield 1600000 giraffes
-		on tick:if (have moonGardens) yield 0.01 goldenAcaciaLeaves
 		req:75000000000 giraffes:earned
 
 	*continent|continent
@@ -161,7 +158,6 @@ Buildings
 		icon:icons[3,7]
 		cost:1000000000 giraffes
 		on tick:yield 1600000 giraffes
-		on tick:if (have moonGardens) yield 0.01 goldenAcaciaLeaves
 		req:1000000000 giraffes:earned
 		
 Upgrades
