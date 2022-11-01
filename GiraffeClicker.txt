@@ -22,7 +22,7 @@ Buttons
 		desc:Click this giraffe to get more giraffes!
 		on click:anim icon wobble
 		on click:yield 1 giraffe
-		on click:if (have goldenTouch and chance(1%)) yield 1 goldenAcaciaLeaf
+		on click:if (have goldenBranch and chance(1%)) yield 1 goldenAcaciaLeaf
 		icon:stuff/bunny.png
 		no text
 		class:bigButton hasFlares
