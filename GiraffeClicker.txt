@@ -342,17 +342,17 @@ Achievements
 	*clickAchiev1
 		name:That tickles
 		desc:Click the giraffe <b>10</b> times.
-		req:10 giraffeButton clicks
+		req:10 GiraffeButton clicks
 		icon:icons[2,2] icons[0,2] icons[0,6]
 	*clickAchiev2
 		name:If you keep doing this, I'll kick you
 		desc:Click the giraffe <b>100</b> times.
-		req:100 giraffeButton clicks
+		req:100 GiraffeButton clicks
 		icon:icons[2,2] icons[0,3] icons[0,6]
 	*clickAchiev3
 		name:no, really, I will actually kick you
 		desc:Click the giraffe <b>2000</b> times.
-		req:2000 giraffeButton clicks
+		req:2000 GiraffeButton clicks
 		icon:icons[2,2] icons[0,4] icons[0,6]
 		
 	*giraffePsAchiev1
