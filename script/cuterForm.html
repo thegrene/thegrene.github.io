@@ -125,7 +125,17 @@ button:hover {
     <h1>District Information</h1>
     <p><input type="text" placeholder="District Name" oninput="this.className = ''" name="district"></p>
     <p><input type="text" placeholder="Superintendent" oninput="this.className = ''" name="supt"></p>
-    <p><input type="text" placeholder="County Name" oninput="this.className = ''" name="county"></p>
+
+
+  <label for="county">SCRIPT workshop location</label>
+<br>
+  <select name="county" id="county">
+    <option value="MCOE">Mendocino County Office of Education</option>
+    <option value="SBCSS">San Bernardino County Superintendent of Schools</option>
+    <option value="SDCOE">San Diego County Office of Education</option>
+    <option value="CDE">California Deparment of Education</option>
+  </select>
+
   </div>
 
 
@@ -222,7 +232,7 @@ function getOption() {
 
   document.getElementById("schoolDist").innerHTML = document.querySelector('input[name="district"]').value;
   document.getElementById("superintendent").innerHTML = document.querySelector('input[name="supt"]').value;
-  document.getElementById("distCounty").innerHTML = document.querySelector('input[name="county"]').value;
+  document.getElementById("distCounty").innerHTML = document.querySelector('select[name="county"]').value;
   document.getElementById("ourVision").innerHTML = document.querySelector('textarea[name="vision"]').value;
   document.getElementById("techText1").innerHTML = document.querySelector('input[name="tech1"]:checked').value;
   document.getElementById("techScore1").innerHTML = document.querySelector('input[name="tech1"]:checked').title;
