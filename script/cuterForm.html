@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #4F6A92;
+  margin: 20px;
+  font-size: 18px;
+}
+
+.report {
+  background-color: #ffffff;
+  margin: 100px auto;
+  font-family: Raleway;
+  padding: 40px;
+  width: 80%;
+  min-width: 300px;
+}
+
+#regForm {
+  background-color: #ffffff;
+  margin: 100px auto;
+  font-family: Raleway;
+  padding: 40px;
+  width: 80%;
+  min-width: 300px;
+}
+
+h1 {
+  text-align: center;  
+}
+
+h2 {
+  text-align: center;  
+}
+
+.radio {
+  display: inline-flex;
+  overflow: hidden;
+}
+
+.radio__input {
+  display: none;
+}
+
+.radio__label {
+  padding: 8px 14px;
+  font-size: 14px;
+  font-family: Raleway, sans-serif;
+  cursor: pointer;
+  background: #CBD6E5;
+  opacity: 0.8;
+  transition: background 0.1s;
+}
+
+.radio__label:not(:last-of-type){
+  border-right: 4px solid #ffffff;
+}
+
+.radio__input:checked + .radio__label{
+  background: #FFCC66;
+}
+
+.radio__label:hover {
+  opacity: 1.0;
+}
+
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+button {
+  background-color: #FFCC66;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #CBD6E5;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #CBD6E5;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #4F6A92;
+}
+</style>
+
+<body>
+
+
+<form id="regForm">
+  <!-- One "tab" for each step in the form: -->
+
+  <div class="tab">
+    <h1>District Information</h1>
+    <p><input type="text" placeholder="District Name" oninput="this.className = ''" name="district"></p>
+    <p><input type="text" placeholder="Superintendent" oninput="this.className = ''" name="supt"></p>
+    <p><input type="text" placeholder="County Name" oninput="this.className = ''" name="county"></p>
+  </div>
+
+
+  <div class="tab">
+    <h1>Your Computer Science Vision Statement</h1>
+    <p><textarea rows="4" cols="50" placeholder="We believe in CS for all because..." name="vision"></textarea></p>
+   
+  </div>
+
+  <div class="tab">
+    <h1>District Technology Plan</h1>
+  
+    <div class="radio">  
+    <input class="radio__input" title="1" type="radio" id="tnov1" name="tech1" value="The district does not have a defined plan for implementing technology. Teaching, curriculum, hardware, and software decisions are not aligned with the district's CS education vision.">
+    <label class="radio__label" for="tnov1">[Novice] The district does not have a defined plan for implementing technology. Teaching, curriculum, hardware, and software decisions are not aligned with the district's CS education vision.</label>
+  
+    <input class="radio__input" title="2" type="radio" id="tem1" name="tech1" value="The district does not have a defined plan for implementing technology. Teaching, curriculum, hardware, and software decisions are partially or selectively aligned with an educational vision, but not necessarily CS initiatives.">
+    <label class="radio__label" for="tem1">[Emerging] The district does not have a defined plan for implementing technology. Teaching, curriculum, hardware, and software decisions are partially or selectively aligned with an educational vision, but not necessarily CS initiatives.</label>
+  
+    <input class="radio__input" title="3" type="radio" id="tdev1" name="tech1" value="The district has a plan for technology that is connected directly to its CS vision, goals, and CSforALL plans. Teaching, curriculum, hardware, and software decisions are mostly aligned with the district's CS education and CSforALL vision, plans, and goals.">
+    <label class="radio__label" for="tdev1">[Developing] The district has a plan for technology that is connected directly to its CS vision, goals, and CSforALL plans. Teaching, curriculum, hardware, and software decisions are mostly aligned with the district's CS education and CSforALL vision, plans, and goals.</label>
+  
+    <input class="radio__input" title="4" type="radio" id="thd1" name="tech1" value="The district has a clear plan and prioritizes technology as an integral part of its CS education and CSforALL vision, plans, and goals.  Teaching, curriculum, hardware, and software decisions are directly aligned with and integrate best pedagogical practices. The district revisits plans regularly with the local learning community to determine the appropriate learning devices that best support meaningful, authentic learning.">
+    <label class="radio__label" for="thd1">[Highly Developed] The district has a clear plan and prioritizes technology as an integral part of its CS education and CSforALL vision, plans, and goals.  Teaching, curriculum, hardware, and software decisions are directly aligned with and integrate best pedagogical practices. The district revisits plans regularly with the local learning community to determine the appropriate learning devices that best support meaningful, authentic learning.</label>
+  
+    </div>
+ 
+
+<br><br>
+
+    <div class="radio">  
+    <input class="radio__input" type="radio" id="tnov2" name="tech2" value="The district does not have a defined plan for implementing technology. Teaching, curriculum, hardware, and software decisions are not aligned with the district's CS education vision.">
+    <label class="radio__label" for="tnov2">[Novice] The district does not have a strategy for making devices available to students, teachers, and schools. Devices purchased may be inconsistent and a plan to manage and maintain them may not exist. The district does not have policies for responsible use, digital citizenship, funding, and purchasing.</label>
+
+    <input class="radio__input" type="radio" id="tem2" name="tech2" value="The district does not have a defined plan for implementing technology. Teaching, curriculum, hardware, and software decisions are partially or selectively aligned with an educational vision, but not necessarily CS initiatives.">
+    <label class="radio__label" for="tem2">[Emerging] The district does not have a defined plan for implementing technology. Teaching, curriculum, hardware, and software decisions are partially or selectively aligned with an educational vision, but not necessarily CS initiatives.</label>
+  
+    <input class="radio__input" type="radio" id="tdev2" name="tech2" value="The district has a plan for technology that is connected directly to its CS vision, goals, and CSforALL plans. Teaching, curriculum, hardware, and software decisions are mostly aligned with the district's CS education and CSforALL vision, plans, and goals.">
+    <label class="radio__label" for="tdev2">[Developing] The district has a plan for technology that is connected directly to its CS vision, goals, and CSforALL plans. Teaching, curriculum, hardware, and software decisions are mostly aligned with the district's CS education and CSforALL vision, plans, and goals.</label>
+  
+    <input class="radio__input" type="radio" id="thd2" name="tech2" value="The district has a clear plan and prioritizes technology as an integral part of its CS education and CSforALL vision, plans, and goals.  Teaching, curriculum, hardware, and software decisions are directly aligned with and integrate best pedagogical practices. The district revisits plans regularly with the local learning community to determine the appropriate learning devices that best support meaningful, authentic learning.">
+    <label class="radio__label" for="thd2">[Highly Developed] The district has a clear plan and prioritizes technology as an integral part of its CS education and CSforALL vision, plans, and goals.  Teaching, curriculum, hardware, and software decisions are directly aligned with and integrate best pedagogical practices. The district revisits plans regularly with the local learning community to determine the appropriate learning devices that best support meaningful, authentic learning.</label>
+  
+    </div>
+  </div>
+
+
+  
+  <div class="tab">
+<h1>Your completed Strategic Implementation Plan is below!</h1> 
+</div>
+
+  <br>
+  <div style="overflow:auto;">
+    <div style="float:right;">
+      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+    </div>
+  </div>
+  <!-- Circles which indicates the steps of the form: -->
+  <div style="text-align:center;margin-top:40px;">
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+  </div>
+
+</form>
+
+<div class="report">
+<h1>Strategic Implementation Plan<br>for K-12 Computer Science</h1>
+<h2 id="schoolDist"></h2>
+<h2> <a id="superintendent"></a>, Superintendent</h2>
+<h2 id="dateToday"></h2>
+<h3>Vision</h3>
+<p id="ourVision">We believe in equitable, rigorous Computer Science Education for all students. </p>
+<h3>Technology Infrastructure</h3>
+<p>Score: <a id="techScore1">0</a>/4  </p>
+<p id="techText1"></p>
+<p id="techText2"></p>
+<h3>Actions</h3>
+<p> This plan was developed with the help of <a id="distCounty"></a> and SCRIPT.</p>
+
+</div>
+
+<script>
+var currentTab = 0; // Current tab is set to be the first tab (0)
+showTab(currentTab); // Display the current tab
+  getOption();
+
+function getOption() {
+  const d = new Date();
+  document.getElementById("dateToday").innerHTML = d.toLocaleDateString();
+
+  document.getElementById("schoolDist").innerHTML = document.querySelector('input[name="district"]').value;
+  document.getElementById("superintendent").innerHTML = document.querySelector('input[name="supt"]').value;
+  document.getElementById("distCounty").innerHTML = document.querySelector('input[name="county"]').value;
+  document.getElementById("ourVision").innerHTML = document.querySelector('textarea[name="vision"]').value;
+  document.getElementById("techText1").innerHTML = document.querySelector('input[name="tech1"]:checked').value;
+  document.getElementById("techScore1").innerHTML = document.querySelector('input[name="tech1"]:checked').title;
+  document.getElementById("techText2").innerHTML = document.querySelector('input[name="tech2"]:checked').value;
+  
+}
+
+
+function showTab(n) {
+  // This function will display the specified tab of the form...
+  var x = document.getElementsByClassName("tab");
+  x[n].style.display = "block";
+  //... and fix the Previous/Next buttons:
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "inline";
+  }
+  if (n == (x.length - 1)) {
+    document.getElementById("nextBtn").innerHTML = "Finish";
+  } else {
+    document.getElementById("nextBtn").innerHTML = "Next";
+  }
+  //... and run a function that will display the correct step indicator:
+  fixStepIndicator(n)
+  getOption();
+}
+
+function nextPrev(n) {
+  // This function will figure out which tab to display
+  var x = document.getElementsByClassName("tab");
+  // Exit the function if any field in the current tab is invalid:
+  //if (n == 1 && !validateForm()) return false;
+  // Hide the current tab:
+  x[currentTab].style.display = "none";
+  // Increase or decrease the current tab by 1:
+  currentTab = currentTab + n;
+  // if you have reached the end of the form...
+  if (currentTab >= x.length) {
+    // ... the form gets submitted:
+    document.getElementById("regForm").submit();
+    return false;
+  }
+  // Otherwise, display the correct tab:
+  showTab(currentTab);
+}
+
+function validateForm() {
+  // This function deals with validation of the form fields
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  // A loop that checks every input field in the current tab:
+  for (i = 0; i < y.length; i++) {
+    // If a field is empty...
+    if (y[i].value == "") {
+      // add an "invalid" class to the field:
+      y[i].className += " invalid";
+      // and set the current valid status to false
+      valid = false;
+    }
+  }
+  // If the valid status is true, mark the step as finished and valid:
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+//  return valid; // return the valid status
+return true;
+ }
+
+function fixStepIndicator(n) {
+  // This function removes the "active" class of all steps...
+  var i, x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
+  }
+  //... and adds the "active" class on the current step:
+  x[n].className += " active";
+}
+</script>
+
+</body>
+</html>
+
