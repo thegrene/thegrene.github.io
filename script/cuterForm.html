@@ -123,12 +123,14 @@ button:hover {
 
   <div class="tab">
     <h1>District Information</h1>
-    <p><input type="text" placeholder="District Name" oninput="this.className = ''" name="district"></p>
-    <p><input type="text" placeholder="Superintendent" oninput="this.className = ''" name="supt"></p>
+    <label for="district">Full District Name: </label>
+    <input type="text" id="district" size="50" placeholder="Example Unified School District" oninput="this.className = ''" name="district">
+    <br>
+    <label for="supt">Superintendent: </label>
+    <input type="text" id="supt" size="53" placeholder="Dr. Beyonce Knowles-Carter" oninput="this.className = ''" name="supt">
+    <br>
 
-
-  <label for="county">SCRIPT workshop location</label>
-<br>
+  <label for="county">SCRIPT workshop location: </label>
   <select name="county" id="county">
     <option value="MCOE">Mendocino County Office of Education</option>
     <option value="SBCSS">San Bernardino County Superintendent of Schools</option>
@@ -252,7 +254,7 @@ function showTab(n) {
     document.getElementById("prevBtn").style.display = "inline";
   }
   if (n == (x.length - 1)) {
-    document.getElementById("nextBtn").innerHTML = "Finish";
+    document.getElementById("nextBtn").innerHTML = "Reset";
   } else {
     document.getElementById("nextBtn").innerHTML = "Next";
   }
