@@ -203,8 +203,24 @@ button:hover {
 
 
 <br><br>
+        
+    <div class="radio">  
+    <input class="radio__input" type="radio" id="tnov4" name="tech4" value="The district does not have a process for identifying student connectivity and device needs. Students must seek and obtain access to devices and connectivity outside of the classroom or school on their own.">
+    <label class="radio__label" for="tnov4">[Novice] The district does not have a process for identifying student connectivity and device needs. Students must seek and obtain access to devices and connectivity outside of the classroom or school on their own.</label>
+
+    <input class="radio__input" type="radio" id="tem4" name="tech4" value="Individual teachers have a process for identifying student connectivity and device needs related to remote learning. Most students must seek and obtain consistent access to devices and connectivity outside of the classroom or school on their own.">
+    <label class="radio__label" for="tem4">[Emerging] Individual teachers have a process for identifying student connectivity and device needs related to remote learning. Most students must seek and obtain consistent access to devices and connectivity outside of the classroom or school on their own.</label>
+
+    <input class="radio__input" type="radio" id="tdev4" name="tech4" value="The district may have resources for families that leverage community spaces (ex: libraries, learning centers) to address student connectivity and device needs. Some students are provided options for consistent access to devices and connectivity outside of school.">
+    <label class="radio__label" for="tdev4">[Developing] The district may have resources for families that leverage community spaces (ex: libraries, learning centers) to address student connectivity and device needs. Some students are provided options for consistent access to devices and connectivity outside of school.</label>
+
+    <input class="radio__input" type="radio" id="thd4" name="tech4" value="The district has clear policies that are communicated to students and families to address connectivity and device needs. Support is provided to the full learning community (ranging from teachers to families) to access digital learning tools, parent portals, resources, and other activities outside of the classroom or school.">
+    <label class="radio__label" for="thd4">[Highly Developed] The district has clear policies that are communicated to students and families to address connectivity and device needs. Support is provided to the full learning community (ranging from teachers to families) to access digital learning tools, parent portals, resources, and other activities outside of the classroom or school.</label>
+
+    </div>
     
-    
+<br><br>
+
   </div>
 
 
@@ -242,6 +258,7 @@ button:hover {
 <p id="techText1"></p>
 <p id="techText2"></p>
 <p id="techText3"></p>
+<p id="techText4"></p>
 <h3>Actions</h3>
 <p> This plan was developed with the help of <a id="distCounty"></a> and SCRIPT.</p>
 
@@ -266,6 +283,7 @@ function getOption() {
   document.getElementById("techScore1").innerHTML = document.querySelector('input[name="tech1"]:checked').title;
   document.getElementById("techText2").innerHTML = document.querySelector('input[name="tech2"]:checked').value;
   document.getElementById("techText3").innerHTML = document.querySelector('input[name="tech3"]:checked').value;
+  document.getElementById("techText4").innerHTML = document.querySelector('input[name="tech4"]:checked').value;
 
 }
 
