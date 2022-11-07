@@ -220,6 +220,23 @@ button:hover {
     </div>
     
 <br><br>
+      
+    <div class="radio">  
+    <input class="radio__input" type="radio" id="tnov5" name="tech5" value="The district does not have a process for selecting computer science education software. Any existing educational software does not connect to teaching and curricular priorities or plans. Teachers and school personnel do not receive software training. Software is not accessible for all students and/or does not integrate with assistive technology.">
+    <label class="radio__label" for="tnov5">[Novice] The district does not have a process for selecting computer science education software. Any existing educational software does not connect to teaching and curricular priorities or plans. Teachers and school personnel do not receive software training. Software is not accessible for all students and/or does not integrate with assistive technology.</label>
+
+    <input class="radio__input" type="radio" id="tem5" name="tech5" value="The district does not have a consistent process for selecting computer science education software. Existing educational software does not always connect to teaching and curricular priorities or plans. Teachers and school personnel receive inconsistent and/or very little software training. Software is not accessible for all students and/or does not integrate with assistive technology.">
+    <label class="radio__label" for="tem5">[Emerging] The district does not have a consistent process for selecting computer science education software. Existing educational software does not always connect to teaching and curricular priorities or plans. Teachers and school personnel receive inconsistent and/or very little software training. Software is not accessible for all students and/or does not integrate with assistive technology.</label>
+
+    <input class="radio__input" type="radio" id="tdev5" name="tech5" value="The district has a process for selecting software that is aligned to its CS education and CSforALL vision, plan, and goals. Existing educational software supports teaching and curricular priorities or plans. Teachers and school personnel receive some software training. Software is accessible to most but not all students, some of which may integrate with assistive technology.">
+    <label class="radio__label" for="tdev5">[Developing] The district has a process for selecting software that is aligned to its CS education and CSforALL vision, plan, and goals. Existing educational software supports teaching and curricular priorities or plans. Teachers and school personnel receive some software training. Software is accessible to most but not all students, some of which may integrate with assistive technology.</label>
+
+    <input class="radio__input" type="radio" id="thd5" name="tech5" value="The district consistently selects software that is directly aligned to CS education and CSforALL vision, plan, and goals. Existing educational software supports high-quality teaching and curricular priorities or plans. Teachers and school personnel receive professional development integrated with their practice. Software is accessible to all students, some of which may integrate with assistive technology.">
+    <label class="radio__label" for="thd5">[Highly Developed] The district consistently selects software that is directly aligned to CS education and CSforALL vision, plan, and goals. Existing educational software supports high-quality teaching and curricular priorities or plans. Teachers and school personnel receive professional development integrated with their practice. Software is accessible to all students, some of which may integrate with assistive technology.</label>
+
+    </div>
+
+<br><br>
 
   </div>
 
@@ -259,10 +276,11 @@ button:hover {
 <p id="techText2"></p>
 <p id="techText3"></p>
 <p id="techText4"></p>
+<p id="techText5"></p>
 <h3>Actions</h3>
 <p> This plan was developed with the help of <a id="distCounty"></a> and SCRIPT.</p>
 
-<p>Co-Created by Dr. Emily Thomforde and Ryan Dittmar</p>
+<p>Co-Created by Dr. Emily Thomforde and Ryan Dittmar.</p>
 
 </div>
 
@@ -284,6 +302,7 @@ function getOption() {
   document.getElementById("techText2").innerHTML = document.querySelector('input[name="tech2"]:checked').value;
   document.getElementById("techText3").innerHTML = document.querySelector('input[name="tech3"]:checked').value;
   document.getElementById("techText4").innerHTML = document.querySelector('input[name="tech4"]:checked').value;
+  document.getElementById("techText5").innerHTML = document.querySelector('input[name="tech5"]:checked').value;
 
 }
 
