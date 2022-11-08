@@ -23,7 +23,7 @@ Buttons
 		on click:anim icon wobble
 		on click:yield 1 giraffe
 		on click:if (have goldenAcaciaBranch and chance(1%)) yield 1 goldenAcaciaLeaf
-		icon:stuff/giraffe_icon.jpg
+		icon:https://thegrene.github.io/stuff/giraffe_icon.jpeg
 		no text
 		class:bigButton hasFlares
 		icon class:shadowed
