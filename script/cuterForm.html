@@ -201,11 +201,12 @@ button:hover {
     <label class="radio__label" for="thd3">[Highly Developed] The district provides and implements a policy for consistent building-level access to broadband via wired or wireless connections. District technical staff and educators collaborate on curricular needs and connection accessibility to drive optimal student engagement and learning.</label>
 
     </div>
+
   </div>
 
 
-<div class="tab">
-  <h1>District Technology Plan (2/2)</h1>
+  <div class="tab">
+    <h1>District Technology Plan (2/2)</h1>
   
     <div class="radio">  
     <input class="radio__input" type="radio" id="tnov4" name="tech4" value="The district does not have a process for identifying student connectivity and device needs. Students must seek and obtain access to devices and connectivity outside of the classroom or school on their own.">
@@ -255,10 +256,35 @@ button:hover {
     <label class="radio__label" for="thd6">[Highly Developed] The district has a plan for consistent and equitable IT support and has some budget to provide personnel district-wide. Student and evaluation data are managed via a secure method that protects personally identifiable information. The district is well aware of potential risks. The district plans and budgets for technology and network upgrades that keep up with capacity expansions.</label>
 
     </div>
+
   </div>
 
 
+  <div class="tab">
+    <h1>District Teaching Development Plan</h1>
+  </div>
   
+  <div class="tab">
+    <h1>District Leadership Plan (1/2)</h1>
+  </div>
+
+  <div class="tab">
+    <h1>District Leadership Plan (2/2)</h1>
+  </div>
+
+  <div class="tab">
+    <h1>District Community Enrichment Plan</h1>
+  </div>
+
+  <div class="tab">
+    <h1>District Education Plan</h1> <!--From Ryan: Maybe pick a better name for this one-->
+  </div>
+
+  <div class="tab">
+    <h1>District Partnership Plan</h1>
+  </div>
+
+
   <div class="tab">
 <h1>Your completed Strategic Implementation Plan is below!</h1> 
 </div>
@@ -272,6 +298,12 @@ button:hover {
   </div>
   <!-- Circles which indicates the steps of the form: -->
   <div style="text-align:center;margin-top:40px;">
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
     <span class="step"></span>
     <span class="step"></span>
     <span class="step"></span>
@@ -296,6 +328,18 @@ button:hover {
 <p id="techText4"></p>
 <p id="techText5"></p>
 <p id="techText6"></p>
+<!--FR: placeholders i guess-->
+<h3>Teacher Capacity and Development</h3>
+<p>Score: <a id="">0</a>/4  </p>
+<h3>Leadership</h3>
+<p>Score: <a id="">0</a>/4  </p>
+<h3>Community</h3>
+<p>Score: <a id="">0</a>/4  </p>
+<h3>Materials, Curriculum Selection, and Content Refinement</h3>
+<p>Score: <a id="">0</a>/4  </p>
+<h3>Partners</h3>
+<p>Score: <a id="">0</a>/4  </p>
+<!--FR: placeholders end-->
 <h3>Actions</h3>
 <p> This plan was developed with the help of <a id="distCounty"></a> and SCRIPT.</p>
 
@@ -324,6 +368,7 @@ function getOption() {
   document.getElementById("techText5").innerHTML = document.querySelector('input[name="tech5"]:checked').value;
   document.getElementById("techText6").innerHTML = document.querySelector('input[name="tech6"]:checked').value;
 
+//FR: I wonder if there's a more efficient way to do this...
 }
 
 
