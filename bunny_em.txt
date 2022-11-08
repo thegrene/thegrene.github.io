@@ -23,7 +23,7 @@ Buttons
 		on click:anim icon wobble
 		on click:yield 1 giraffe
 		on click:if (have goldenTouch and chance(1%)) yield 1 goldenAcaciaLeaf
-		icon:stuff/bunny.png
+		icon:hearts.png
 		no text
 		class:bigButton hasFlares
 		icon class:shadowed
