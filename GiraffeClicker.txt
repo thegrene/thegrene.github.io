@@ -7,7 +7,7 @@ Let's make a game!
 	version:1
 
 Settings
-	background:https://thegrene.github.io/stuff/giraffe_background.jpeg
+	background:https://thegrene.github.io/stuff/giraffe_bg.jpeg
 	building cost increase:115%
 	building cost refund:50%
 	spritesheet:icons, 48 by 48, stuff/bunnyIcons.png
