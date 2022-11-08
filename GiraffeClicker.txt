@@ -7,7 +7,7 @@ Let's make a game!
 	version:1
 
 Settings
-	background:stuff/meadow.jpg
+	background:stuff/giraffe_background.jpg
 	building cost increase:115%
 	building cost refund:50%
 	spritesheet:icons, 48 by 48, stuff/bunnyIcons.png
@@ -23,7 +23,7 @@ Buttons
 		on click:anim icon wobble
 		on click:yield 1 giraffe
 		on click:if (have goldenAcaciaBranch and chance(1%)) yield 1 goldenAcaciaLeaf
-		icon:https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.flickr.com%2Fphotos%2Fucumari%2F3303800772&psig=AOvVaw37p7G00c22YcrPc09MhszI&ust=1667958593797000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCLDQmo-8nfsCFQAAAAAdAAAAABAD
+		icon:stuff/giraffe_icon.jpg
 		no text
 		class:bigButton hasFlares
 		icon class:shadowed
