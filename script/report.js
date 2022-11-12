@@ -1,6 +1,17 @@
 var currentTab = 0; // Current tab is set to be the first tab (0)
+
+
+var district = 'Sunnyvale Unified School District';
+var dd = {
+        content: [
+{text:'Strategic Implementation Plan for Computer Science', style:'header'},            
+{text:district, margin: [ 0, 10, 0, 10 ], bold:true},     
+]};
+        
+
 showTab(currentTab); // Display the current tab
   getOption();
+
 
 function getOption() {
   const d = new Date();
@@ -19,6 +30,8 @@ function getOption() {
   document.getElementById("techText6").innerHTML = document.querySelector('input[name="tech6"]:checked').value;
 
 //FR: I wonder if there's a more efficient way to do this...
+
+
 }
 
 
@@ -55,6 +68,7 @@ function nextPrev(n) {
   if (currentTab >= x.length) {
     // ... the form gets submitted:
     //document.getElementById("regForm").submit();
+    pdfMake.createPdf(dd).download();
     return false;
   }
   // Otherwise, display the correct tab:
