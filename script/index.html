@@ -2,125 +2,13 @@
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.5/pdfmake.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.5/vfs_fonts.js"></script>
 
-<style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #4F6A92;
-  margin: 20px;
-  font-size: 18px;
-}
-
-.report {
-  background-color: #ffffff;
-  margin: 100px auto;
-  font-family: Raleway;
-  padding: 40px;
-  width: 80%;
-  min-width: 300px;
-}
-
-#regForm {
-  background-color: #ffffff;
-  margin: 100px auto;
-  font-family: Raleway;
-  padding: 40px;
-  width: 80%;
-  min-width: 300px;
-}
-
-h1 {
-  text-align: center;  
-}
-
-h2 {
-  text-align: center;  
-}
-
-.radio {
-  display: inline-flex;
-  overflow: hidden;
-}
-
-.radio__input {
-  display: none;
-}
-
-.radio__label {
-  padding: 8px 14px;
-  font-size: 14px;
-  font-family: Raleway, sans-serif;
-  cursor: pointer;
-  background: #CBD6E5;
-  opacity: 0.8;
-  transition: background 0.1s;
-}
-
-.radio__label:not(:last-of-type){
-  border-right: 4px solid #ffffff;
-}
-
-.radio__input:checked + .radio__label{
-  background: #FFCC66;
-}
-
-.radio__label:hover {
-  opacity: 1.0;
-}
-
-
-/* Hide all steps by default: */
-.tab {
-  display: none;
-}
-
-button {
-  background-color: #FFCC66;
-  border: none;
-  padding: 10px 20px;
-  font-size: 17px;
-  font-family: Raleway;
-  cursor: pointer;
-}
-
-button:hover {
-  opacity: 0.8;
-}
-
-#prevBtn {
-  background-color: #CBD6E5;
-}
-
-/* Make circles that indicate the steps of the form: */
-.step {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #CBD6E5;
-  border: none;  
-  border-radius: 50%;
-  display: inline-block;
-  opacity: 0.5;
-}
-
-.step.active {
-  opacity: 1;
-}
-
-/* Mark the steps that are finished and valid: */
-.step.finish {
-  background-color: #4F6A92;
-}
-</style>
 
 <body>
-
 
 <form id="regForm">
   <!-- One "tab" for each step in the form: -->
@@ -143,7 +31,6 @@ button:hover {
   </select>
 
   </div>
-
 
   <div class="tab">
     <h1>Your Computer Science Vision Statement</h1>
@@ -346,109 +233,11 @@ button:hover {
 <!--FR: placeholders end-->
 <h3>Actions</h3>
 <p> This plan was developed with the help of <a id="distCounty"></a> and SCRIPT.</p>
-
-<p>Co-Created by Dr. Emily Thomforde and Ryan Dittmar.</p>
-
 </div>
 
-<script>
-var currentTab = 0; // Current tab is set to be the first tab (0)
-showTab(currentTab); // Display the current tab
-  getOption();
-
-function getOption() {
-  const d = new Date();
-  document.getElementById("dateToday").innerHTML = d.toLocaleDateString();
-
-  document.getElementById("schoolDist").innerHTML = document.querySelector('input[name="district"]').value;
-  document.getElementById("superintendent").innerHTML = document.querySelector('input[name="supt"]').value;
-  document.getElementById("distCounty").innerHTML = document.querySelector('select[name="county"]').value;
-  document.getElementById("ourVision").innerHTML = document.querySelector('textarea[name="vision"]').value;
-  document.getElementById("techText1").innerHTML = document.querySelector('input[name="tech1"]:checked').value;
-  document.getElementById("techScore1").innerHTML = document.querySelector('input[name="tech1"]:checked').title;
-  document.getElementById("techText2").innerHTML = document.querySelector('input[name="tech2"]:checked').value;
-  document.getElementById("techText3").innerHTML = document.querySelector('input[name="tech3"]:checked').value;
-  document.getElementById("techText4").innerHTML = document.querySelector('input[name="tech4"]:checked').value;
-  document.getElementById("techText5").innerHTML = document.querySelector('input[name="tech5"]:checked').value;
-  document.getElementById("techText6").innerHTML = document.querySelector('input[name="tech6"]:checked').value;
-
-//FR: I wonder if there's a more efficient way to do this...
-}
-
-
-function showTab(n) {
-  // This function will display the specified tab of the form...
-  var x = document.getElementsByClassName("tab");
-  x[n].style.display = "block";
-  //... and fix the Previous/Next buttons:
-  if (n == 0) {
-    document.getElementById("prevBtn").style.display = "none";
-  } else {
-    document.getElementById("prevBtn").style.display = "inline";
-  }
-  if (n == (x.length - 1)) {
-    document.getElementById("nextBtn").innerHTML = "Download PDF";
-  } else {
-    document.getElementById("nextBtn").innerHTML = "Next";
-  }
-  //... and run a function that will display the correct step indicator:
-  fixStepIndicator(n)
-  getOption();
-}
-
-function nextPrev(n) {
-  // This function will figure out which tab to display
-  var x = document.getElementsByClassName("tab");
-  // Exit the function if any field in the current tab is invalid:
-  //if (n == 1 && !validateForm()) return false;
-  // Hide the current tab:
-  x[currentTab].style.display = "none";
-  // Increase or decrease the current tab by 1:
-  currentTab = currentTab + n;
-  // if you have reached the end of the form...
-  if (currentTab >= x.length) {
-    // ... the form gets submitted:
-    //document.getElementById("regForm").submit();
-    return false;
-  }
-  // Otherwise, display the correct tab:
-  showTab(currentTab);
-}
-
-function validateForm() {
-  // This function deals with validation of the form fields
-  var x, y, i, valid = true;
-  x = document.getElementsByClassName("tab");
-  y = x[currentTab].getElementsByTagName("input");
-  // A loop that checks every input field in the current tab:
-  for (i = 0; i < y.length; i++) {
-    // If a field is empty...
-    if (y[i].value == "") {
-      // add an "invalid" class to the field:
-      y[i].className += " invalid";
-      // and set the current valid status to false
-      valid = false;
-    }
-  }
-  // If the valid status is true, mark the step as finished and valid:
-  if (valid) {
-    document.getElementsByClassName("step")[currentTab].className += " finish";
-  }
-//  return valid; // return the valid status
-return true;
- }
-
-function fixStepIndicator(n) {
-  // This function removes the "active" class of all steps...
-  var i, x = document.getElementsByClassName("step");
-  for (i = 0; i < x.length; i++) {
-    x[i].className = x[i].className.replace(" active", "");
-  }
-  //... and adds the "active" class on the current step:
-  x[n].className += " active";
-}
-</script>
+<p><a href="mailto:helpmedoctorem@gmail.com">Emily Thomforde</a> and Ryan Dittmar, 2022</p>
 
 </body>
-</html>
 
+<script src="report.js"></script>
+</html>
