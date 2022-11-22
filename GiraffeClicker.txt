@@ -7,7 +7,7 @@ Let's make a game!
 	version:1
 
 Settings
-	background:https://thegrene.github.io/stuff/giraffe_bg.jpeg
+	background:stuff/savannahbackround.jpeg
 	building cost increase:115%
 	building cost refund:50%
 	spritesheet:icons, 48 by 48, stuff/bunnyIcons.png
@@ -23,7 +23,7 @@ Buttons
 		on click:anim icon wobble
 		on click:yield 1 giraffe
 		on click:if (have goldenAcaciaBranch and chance(1%)) yield 1 goldenAcaciaLeaf
-		icon:https://thegrene.github.io/stuff/giraffe_icon.jpeg
+		icon:stuff/bunny.png
 		no text
 		class:bigButton hasFlares
 		icon class:shadowed
@@ -75,7 +75,7 @@ Buildings
 	*visitor|visitors
 		name:Visitor|Visitors
 		desc:A simple person watching you who only encourages.<//><b>Effect:</b><.>Produces 1 giraffe every 10 seconds.
-		icon:icons[3,0]
+		icon:skinnyAmongus.png
 		cost:15 giraffes
 		on tick:yield 0.1 giraffe
 		unlocked
@@ -83,7 +83,7 @@ Buildings
 	*snack|snacks
 		name:Snack|Snacks
 		desc:A nice little meal.<//><b>Effect:</b><.>Produces 1 giraffe every 1 second.
-		icon:icons[3,1]
+		icon:thiccAmongus.png
 		cost:100 giraffes
 		on tick:yield 0.5 giraffes
 		req:100 giraffes:earned
@@ -156,7 +156,7 @@ Buildings
 		name:Continent|Continents
 		desc:a place for all of the giraffes to roam without those pesky humans.<//><b>Effect:</b><.>Produces 10000000 giraffes per second.
 		icon:icons[3,7]
-		cost:1000000000 giraffes
+		cost:100000000000 giraffes
 		on tick:yield 1600000 giraffes
 		req:1000000000 giraffes:earned
 		
@@ -171,7 +171,7 @@ Upgrades
 		name:Couple
 		desc:Two people coming to see you instead of one.<//><b>Effect:</b><.>+1 giraffe/click
 		icon:icons[1,1]
-		cost:100 giraffe
+		cost:100 giraffes
 		passive:increase giraffe yield of visitor by 1
 		req:1 visitor:earned
 		
@@ -207,7 +207,7 @@ Upgrades
 		cost:10000000
 		passive:multiply giraffe yield of visitor by 1.5
 		passive:multiply yield of giraffe by 1.05
-		req:1000000 giraffes:earned
+		req:50 visitors:earned
 		
 	
 	
@@ -217,7 +217,7 @@ Upgrades
 		name:Leaf
 		desc:A leaf for you to eat!<//><b>Effect:</b><.>snack production x2
 		icon:icons[2,0] icons[3,0]
-		cost:1000 bunnies
+		cost:1000 giraffes
 		passive:multiply yield of snack by 2
 		req:(snack>=1)
 		
@@ -233,7 +233,7 @@ Upgrades
 		name:Meal
 		desc:A meal filled with yummy food!<//><b>Effect:</b><.>snack production x2
 		icon:icons[2,0] icons[3,2]
-		cost:5000000 bunnies
+		cost:5000000 giraffes
 		passive:multiply yield of snack by 2
 		req:(snack>=25)
 		
