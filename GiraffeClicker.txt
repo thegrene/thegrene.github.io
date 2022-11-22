@@ -75,7 +75,7 @@ Buildings
 	*visitor|visitors
 		name:Visitor|Visitors
 		desc:A simple person watching you who only encourages.<//><b>Effect:</b><.>Produces 1 giraffe every 10 seconds.
-		icon:skinnyAmongus.png
+		icon:stuff/skinnyAmongus.png
 		cost:15 giraffes
 		on tick:yield 0.1 giraffe
 		unlocked
@@ -83,7 +83,7 @@ Buildings
 	*snack|snacks
 		name:Snack|Snacks
 		desc:A nice little meal.<//><b>Effect:</b><.>Produces 1 giraffe every 1 second.
-		icon:thiccAmongus.png
+		icon:stuff/thiccAmongus.png
 		cost:100 giraffes
 		on tick:yield 0.5 giraffes
 		req:100 giraffes:earned
