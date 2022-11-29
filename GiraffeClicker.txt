@@ -15,7 +15,7 @@ Settings
 
 Layout
 	use default
-		s
+
 Buttons
 	*GiraffeButton
 		name:Make a giraffe
