@@ -15,7 +15,7 @@ Settings
 
 Layout
 	use default
-		
+		s
 Buttons
 	*GiraffeButton
 		name:Make a giraffe
@@ -216,7 +216,7 @@ Upgrades
 	*leaf
 		name:Leaf
 		desc:A leaf for you to eat!<//><b>Effect:</b><.>snack production x2
-		icon:https://thegrene.github.io/stuff/GoldenAcaciaLeaf.png
+		icon:https://thegrene.github.io/stuff/LeafUpgrade.png
 		cost:1000 giraffes
 		passive:multiply yield of snack by 2
 		req:(snack>=1)
