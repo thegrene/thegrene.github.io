@@ -41,7 +41,7 @@ Resources
 	*goldenAcaciaLeaf|goldenAcaciaLeaves
 		name:Golden acacia leaf|Golden acacia leaves
 		desc:These shiny acacia leaves are terribly rare, terribly precious and terribly delicious!
-		icon:icons[0,1]
+		icon: https://thegrene.github.io/stuff/GoldenAcaciaLeaf.png
 		class:noBackground
 		hidden when 0
 		
