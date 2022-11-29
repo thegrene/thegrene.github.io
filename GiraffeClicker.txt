@@ -75,7 +75,7 @@ Buildings
 	*visitor|visitors
 		name:Visitor|Visitors
 		desc:A simple person watching you who only encourages.<//><b>Effect:</b><.>Produces 1 giraffe every 10 seconds.
-		icon:stuff/skinnyAmongus.png
+		icon:https://thegrene.github.io/stuff/skinnyAmongus.png
 		cost:15 giraffes
 		on tick:yield 0.1 giraffe
 		unlocked
