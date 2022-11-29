@@ -216,7 +216,7 @@ Upgrades
 	*leaf
 		name:Leaf
 		desc:A leaf for you to eat!<//><b>Effect:</b><.>snack production x2
-		icon:icons[2,0] icons[3,0]
+		icon:https://thegrene.github.io/stuff/GoldenAcaciaLeaf.png
 		cost:1000 giraffes
 		passive:multiply yield of snack by 2
 		req:(snack>=1)
