@@ -83,7 +83,7 @@ Buildings
 	*snack|snacks
 		name:Snack|Snacks
 		desc:A nice little meal.<//><b>Effect:</b><.>Produces 1 giraffe every 1 second.
-		icon:stuff/thiccAmongus.png
+		icon:https://thegrene.github.io/stuff/thiccAmongus.png
 		cost:100 giraffes
 		on tick:yield 0.5 giraffes
 		req:100 giraffes:earned
