@@ -34,7 +34,7 @@ Resources
 	*giraffe|giraffes
 		name:Giraffe|Giraffes
 		desc:These are your giraffes. You can use them to purchase things. Your goal is to have as many giraffes as possible!
-		icon:https://thegrene.github.io/stuff/giraffe.png
+		icon:https://thegrene.github.io/stuff/halfGiraffe.png
 		class:noBackground
 		show earned
 		
