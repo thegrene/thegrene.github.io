@@ -23,7 +23,7 @@ Buttons
 		on click:anim icon wobble
 		on click:yield 1 giraffe
 		on click:if (have goldenAcaciaBranch and chance(1%)) yield 1 goldenAcaciaLeaf
-		icon: https://www.pngall.com/wp-content/uploads/2017/11/Giraffe-PNG-HD.png
+		icon: https://cdn.pixabay.com/photo/2016/06/30/10/38/giraffe-1488723_960_720.png
 		no text
 		class:bigButton hasFlares
 		icon class:shadowed
