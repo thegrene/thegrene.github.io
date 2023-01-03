@@ -34,7 +34,7 @@ Resources
 	*giraffe|giraffes
 		name:Giraffe|Giraffes
 		desc:These are your giraffes. You can use them to purchase things. Your goal is to have as many giraffes as possible!
-		icon:icons[0,0]
+		icon:https://thegrene.github.io/stuff/giraffe.png
 		class:noBackground
 		show earned
 		
@@ -51,7 +51,7 @@ Shinies
 		movement:onRight moveLeft fade bounce:0.05
 		frequency:60
 		frequency variation:30
-		icon:stuff/luckyGiraffe.png
+		icon:https://thegrene.github.io/stuff/giraffe.png
 		class:bigButton
 		on click:
 			$boost=1
