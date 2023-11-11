@@ -48,7 +48,7 @@ img {
   border-radius: 10px 0 0 10px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
+/* On hover, add a black background color that's a little bit see-through */
 .prev:hover,
 .next:hover {
   background-color: rgba(0,0,0, 0.6);
@@ -82,6 +82,12 @@ img {
 
 .sidenav a {
   text-decoration: none;
+}
+
+.sidenav p {
+ font-family: "Lato", sans-serif;
+ font-size: 10px;
+ color: teal;
 }
 
 .butt {
