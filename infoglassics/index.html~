@@ -1,0 +1,40 @@
+<html><head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://thegrene.github.io/style.css">
+</head>
+
+<body>
+
+<div class="sidenav">
+<h1><a href="http://thegrene.github.io">Dr. Emily Thomforde</a></h1>
+<img src="http://thegrene.github.io/em/et_headshot.jpg" width="100%">
+<div class="padded">
+  <a class="butt" href="mailto:emily0@gmail.com">Contact</a> 
+  <a class="butt" href="http://thegrene.github.io/press/index.html">Press</a>
+  <a class="butt" href="https://calendly.com/doctorem">Calendar</a>
+</div>
+</div>
+
+<div class="main">
+  <h1>Press</h1>
+<h3>Reach 2023 <a href="https://www.reach.edu/post/faculty-spotlight-computer-science-skills-for-all-teachers">Faculty Spotlight: Computer science skills for all teachers</a></h3>
+<h3>SBCSS 2022 <a href="https://www.sbcss.k12.ca.us/index.php/newsroom/newsroom-press-releases/3278-computer-science-teaches-today-s-students-to-solve-tomorrow-s-problems">Computer Science Teaches Students to Solve Tomorrow's Problems Today</a></h3>
+<h3>CSforCA 2020 <a href="https://csforca.org/cs-spotlight-emily-thomforde-computer-science-education-equity-advocate/">CS Spotlight: Emily Thomforde, Computer Science Education & Equity Advocate</a></h3>
+<h3>SMCOE 2018 <a href="https://www.smcoe.org/about/county-office-of-education/news/the-importance-of-computer-science-in-curriculum.html">The Importance of Computer Science in Curriculum</a></h3>
+<h3>Vice 2016 <a href="https://www.vice.com/en/article/aeknqa/bey-script-uses-a-clever-beyonce-analogy-to-teach-non-techies-how-to-code">'Bey Script' Uses a Clever Beyonce Analogy to Teach Non-Techies How to Code</a></h3>
+<h3>Mercury News 2016 <a href="https://www.mercurynews.com/2016/05/07/new-program-at-the-tech-shows-science-is-for-girls">New Program at the Tech Shows Science is for Girls</a></h3>
+<h3>Repubblica 2016 <a href="https://www.repubblica.it/tecnologia/2016/11/22/news/coding_girls-152529677">Alessia, coding girl: "Scrivere codice mi ha aperto la mente"</a></h3>
+
+<img src="http://thegrene.github.io/em/et_tech.png" width = "30%">
+<img src="http://thegrene.github.io/em/et_NYC.jpg" width = "60%">
+
+
+<p>Dr. Emily Thomforde is the Faculty Lead for Computer Sciences at Reach University. She focuses on culturally sustaining pedagogy and making connections between computing and other disciplinary areas. She runs the weekly CSEdResarch.org Discussion Group, the Bay Area Youth Computer Science Council, and AIforCA. When not teaching teachers, she can be found at her local library makerspace building robots with children. 
+ 
+Emily previously served as Computer Science Coordinator at the California Department of Education and San Mateo County Office of Education. She is a BAFTA-winning video game developer, and has eight years of experience teaching computer programming, software development and computing pedagogy at libraries, prisons, museums, and public schools locally and abroad. Her curriculum development credits include Vidcode, Hopscotch, Code.org, STEM from Dance, Code Combat, and BrainPOP. Emily holds a PhD in Artificial Intelligence from the University of Edinburgh in Scotland, UK.
+
+</p>
+
+</div>   
+
+</body></html>
