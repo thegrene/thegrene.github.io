@@ -23,6 +23,9 @@
 <img src="http://thegrene.github.io/em/et_tech.png" width = "30%">
 <img src="http://thegrene.github.io/em/et_NYC.jpg" width = "60%">
 
+<h1>Order of Complexity</h1>
+<iframe src="https://www.desmos.com/calculator/vd6tba7usr?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
   <h1>Library Users</h1>
 <iframe width = "90%" height = 400 src="https://editor.p5js.org/emily0/full/S0FphTNW8"></iframe>
 
