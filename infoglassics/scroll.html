@@ -1,0 +1,42 @@
+<html><head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://thegrene.github.io/style.css">
+</head>
+<body>
+
+<div class="main">
+<h1>Infoglassics</h1>
+
+<p>Explanation of first art</p>
+
+<script>
+async function getData() {
+  const url = "https://editor.p5js.org/editor/emily0/collections/";
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+
+    const result = await response.json();
+    console.log(result);
+  } catch (error) {
+    console.error(error.message);
+  }
+}
+
+getData();
+</script>
+
+</div>
+
+<div class="sidenav">
+  <h1>Infoglassics</h1>
+
+<h3>Stained glass objects inspired by data science</h3>
+<h3><a href="https://thegrene.github.io">Dr. Emily Thomforde</a></h3>
+</div>
+
+ 
+
+</body></html>
