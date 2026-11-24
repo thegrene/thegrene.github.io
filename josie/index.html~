@@ -5,51 +5,9 @@
 <body>
 
 <div class="sidenav">
-<h1>Dr. Emily Thomforde</h1>
 
 <div class="container">
-  <div class="mySlides">
-    <div class="numbertext">1 / 8</div>
-    <img src="art/colorpuffs.png" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">2 / 8</div>
-    <img src="art/sputnik.png" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">3 / 8</div>
-    <img src="art/hearts.png" style="width:100%">
-  </div>
-    
-  <div class="mySlides">
-    <div class="numbertext">4 / 8</div>
-    <img src="art/swirls.png" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">5 / 8</div>
-    <img src="art/tree.png" style="width:100%">
-  </div>
-    
-  <div class="mySlides">
-    <div class="numbertext">6 / 8</div>
-    <img src="art/triangles_gradient.png" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">7 / 8</div>
-    <img src="art/bricks2.png" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">8 / 8</div>
-    <img src="art/conch.png" style="width:100%">
-  </div>
-    
-<a class="prev" onclick="plusSlides(-1)">&#8249;</a>
-<a class="next" onclick="plusSlides(1)">&#8250;</a>
+<img src="josie_magnifier_web.png" width=100%>
 
 </div>
 
@@ -61,67 +19,17 @@
 </div>
 
 
-<p>Learners of HTML, CSS, and JavaScript are invited to use this page as a template. Right-click anywhere and select "Show Page Source" to inspect the code. Can you change the color of this text? <a href="https://www.w3schools.com">See W3Schools</a> for tutorials and reference.<p>
-
 </div>
 
 <div class="main">
-  <h1>Professor of Computer Sciences, <a href="https://reach.edu">Reach University</a></h2>
-<h2>Courses</h2>
-<h3>CS 300: Computer Science * <a href="https://reachu.instructure.com/courses/3504">Canvas</a> * <a href="https://docs.google.com/document/d/1ZxkTSLY6OAq6nqunBS2-2rUND2usx93cyeqwXlBMYcQ/">Syllabus</a> * <a href="https://docs.google.com/document/d/1uo1RFcQmfioBAzdj9KmHyKkkRMLvisyHQqwMM3bbHLM/">Workbook</a></h3>
-<p>13-week undergraduate course covering fundamentals of computer science, computer programming, and inclusive pedagogies, aligned to K-12 CS Standards for Alabama, Arkansas, California, and Louisiana.</p>
-
-<h3>CS 333: Computer Science Pedagogy and Andragogy * <a href="https://reachu.instructure.com/courses/2153">Canvas</a> * <a href="https://docs.google.com/document/d/1y7oWrkX2icjDGw5ToZyOCl6v14eJbqF8Apijt630EY8">Syllabus</a></h3>
-<p>8-week graduate course on the content, practice, and theory of CS Education, preparing faculty of other disciplines to teach CS 300.</p>
-
-<h3>CS 404: Inside AI * <a href="https://reachu.instructure.com/courses/4401">Canvas</a> * <a href="https://docs.google.com/presentation/d/1Znjg1coe7Y6AmXBFj1GiTb72eG_p3JVPF7RmfKBnTQk/">Flyer</a> * <a href="https://docs.google.com/document/d/18n1iamDlW5Bgab2ssNoJx-5hPHW1CvaQQnhW1yxTNhc/">Workbook</a></h3>
-<p>A four-week course open to the public, providing a general introduction to the science and ethics behind the AI technologies we have come to interact with every day.</p>
-
-<h3>Reach 272: Coding for Teaching * <a href="https://reachu.instructure.com/courses/3610">Canvas</a> * <a href="https://docs.google.com/document/d/1qCeArLeAo30xsuzWqNYYymMi-9lPTJ4eA2IomDu1mvs/">Syllabus</a></h3>
-<p>4-week graduate seminar covering topics in culturally sustaining CS pedagogy, Hackathons, Scratch, AppLab, and Python.</p>
-
-<h3>Elementary for Computing (E4C) * <a href="https://sites.google.com/summerofcs.org/home/2022-past-workshops/elementary4cs">Year 1</a> * <a href="https://reachu.instructure.com/courses/1244/modules">Year 2</a></h3> 
-<p>Ever-expanding professional learning modules for K-6 in-service teachers, aligned to California K-12 CS Standards.</p>
-<br>
-
-
- <h2>Ongoing Projects</h2>
-<h3><a href="https://iacomputinged.org/discussion-group-2/">CSEd Discussion Group</a></h3>
-<p>Everyone is invited to participate in the weekly CSEd Discussion Group, sponsored by the Institute for Advancing Computing Education (IACE) on Fridays at 2pm (Pacific).</p>
-<h3><a href="https://www.instagram.com/infoglassics/">Infoglassics</a></h3>
-<p>Stained glass objects inspired by data science</p>
-<h3>Writing</h3>
-<p>Coming Fall 2026</p>
-<br>
-<h2>I used to make video games</h2>
-And two of them have been <a href="https://coolsons.com">re-released</a> for modern hardware
-<h3><a href="https://apps.apple.com/us/app/coolsons-chocolate-alphabet/id593837804">Coolson's Artisanal Chocolate Alphabet</a></h3>
-<h3><a href="https://apps.apple.com/us/app/coolsons-pocket-pack/id807447730">Coolson's Pocket Pack</a></h3>
+<h1>Josie Novak, Just Detective</h1>
+<h2>Computational Thinking Mysteries for K-5</h2>
+<ul>
+<li><a href="">Read a chapter</a></li>
+<li><a href="">Print at home mini-book</a></li>
+<li><a href="">Sign up for news</a></li>
+<li><a href="">Send feedback</a></li>
+</ul>
 </div>  
-
-<script>
-var slideIndex = Math.floor(Math.random()*8);
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  slides[slideIndex-1].style.display = "block";
-}
-</script>
- 
 
 </body></html>
